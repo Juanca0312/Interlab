@@ -1,0 +1,102 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.CompanyRegister {
+  flex: 1;
+}
+
+
+.example-is-mobile .example-sidenav-container {
+  flex: 1 0 auto;
+}
+
+.descripción{
+  resize: none;
+  transform: translateX(270px) translateY(-100px);
+}
+
+.sector{
+  transform: translateX(10px);
+  width: 674px;
+}
+.ciclo{
+  width: 280px;
+}
+.universidad{
+  width: 280px;
+}
+
+
+.cursando{
+  padding-left: 19em;
+}
+
+.autodescription{
+  padding-left: 10em;
+}
+
+.Sg{
+  padding-left: 10em;
+  transform: translateX(-20px);
+}
+
+.Title{
+  transform: translateX(50px) translateY(-10px);
+  font-size: 20px;
+}
+
+.Guardar{
+  transform: translateX(780px);
+}
+
+.Regresar{
+  transform: translateX(-80px);
+}
+
+.Botones{
+  width: 1000px;
+  transform: translateY(200px) translateX(-18px);
+}
+
+.edit{
+  max-width: 1000px;
+  max-height: 360px;
+  transform: translateX(50px);
+}
+
+.Edit-prfile-title{
+  font-size: 30px;
+  padding-left: 2em;
+}
+
+.buscar{
+  font-size: 15px;
+}
+
+.person{
+  transform: translateX(660px);
+}
+
+.menu{
+  transform: translateX(-10px) translateY(-4px);
+}
+
+.user{
+  transform: translateX(660px);
+}

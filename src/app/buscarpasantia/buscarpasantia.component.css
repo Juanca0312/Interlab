@@ -1,7 +1,4 @@
 
-
-
-
 .example-container {
   display: flex;
   flex-direction: column;
@@ -156,11 +153,3 @@ h1.example-app-name {
 .custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--radio {
   background-image: url(https://i.ibb.co/wdh6sjB/Estrella-Checked.png);
 }
-
-
-
-
-
-
-
-
