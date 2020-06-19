@@ -1,3 +1,4 @@
+
 <mat-grid-list cols="20" rowHeight="100%">
   <mat-grid-tile colspan="8">
     <form class="example-form">
@@ -16,13 +17,18 @@
         </button>
       </mat-form-field>
 
-      <a href="register">Crear Cuenta</a>
-      <button class="btn_register" mat-raised-button color="primary">Iniciar Sesión</button>
+      <a routerLink="/register">Crear Cuenta</a>
+      <button routerLink="/dashboard-student" class="btn_register" mat-raised-button color="primary">Iniciar Sesión</button>
     </form>
+
   </mat-grid-tile>
 
   <mat-grid-tile colspan="12">
     <img class="welcome" src="../../assets/login.png" alt="login">
   </mat-grid-tile>
+    <router-outlet></router-outlet>
 </mat-grid-list>
+
+
+
 
