@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;800&display=swap');
 
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+}
+
 .column{
   float: left;
   width: 50%;
