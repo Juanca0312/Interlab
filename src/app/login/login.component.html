@@ -1,0 +1,28 @@
+<mat-grid-list cols="20" rowHeight="100%">
+  <mat-grid-tile colspan="8">
+    <form class="example-form">
+      <img class="logo" src="assets/interlab_logo.png">
+
+      <mat-form-field class="example-full-width" floatLabel="always">
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput placeholder="avelasquez@gmail.com">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" floatLabel="always">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [type]="hide1 ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide1">
+          <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <a href="register">Crear Cuenta</a>
+      <button class="btn_register" mat-raised-button color="primary">Iniciar Sesión</button>
+    </form>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="12">
+    <img class="welcome" src="../../assets/login.png" alt="login">
+  </mat-grid-tile>
+</mat-grid-list>
+
