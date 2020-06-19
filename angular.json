@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "memberships"
+  "defaultProject": "memberships",
+  "cli": {
+    "analytics": "d4821e78-c424-4578-8e6a-5cd0954aa9ed"
+  }
 }
