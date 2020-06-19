@@ -20,13 +20,17 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
 import {MatCardModule} from "@angular/material/card";
 import { AppRoutingModule } from './app-routing.module';
+import { EditprofilestudentComponent } from './editprofilestudent/editprofilestudent.component';
+import { BuscarpasantiaComponent } from './buscarpasantia/buscarpasantia.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegisterComponent,
-    DashboardStudentComponent
+    DashboardStudentComponent,
+    EditprofilestudentComponent,
+    BuscarpasantiaComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [LoginComponent],
+  bootstrap: [DashboardStudentComponent],
   exports: [
     FormsModule,
     ReactiveFormsModule

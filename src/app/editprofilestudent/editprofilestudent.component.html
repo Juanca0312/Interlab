@@ -1,0 +1,81 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
+<br>
+  <p class="Edit-prfile-title">
+    <b>
+      Editar Perfil
+    </b>
+  </p>
+  <mat-card class="edit">
+    <mat-card-content>
+      <p class="Title">
+          <span class="material-icons">
+            edit
+          </span>
+        Editar Skills
+      </p>
+      <mat-label class="Sg">Skills Generales</mat-label> &nbsp;
+      <mat-form-field class="sector"
+                      [hideRequiredMarker]="hideRequiredControl.value"
+                      [floatLabel]="floatLabelControl.value">
+        <mat-label>Sector</mat-label>
+        <mat-select>
+          <mat-option value="Tegnología">Tegnologia</mat-option>
+          <mat-option value="Contabilidad">Contabilidad</mat-option>
+          <mat-option value="Empresarial">Empresarial</mat-option>
+          <mat-option value="Medina">Medicina</mat-option>
+        </mat-select>
+        <mat-error *ngIf="sector.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <br/>
+      <mat-label class="cursando"> Cursando </mat-label> &nbsp;
+      <mat-form-field class="ciclo"
+                      [hideRequiredMarker]="hideRequiredControl.value"
+                      [floatLabel]="floatLabelControl.value">
+        <mat-label>Seleccione ciclo</mat-label>
+        <mat-select required>
+          <mat-option value="9° Ciclo">9° Ciclo</mat-option>
+          <mat-option value="8° Ciclo">8° Ciclo</mat-option>
+          <mat-option value="7° Ciclo">7° Ciclo</mat-option>
+          <mat-option value="6° Ciclo">6° Ciclo</mat-option>
+          <mat-option value="5° Ciclo">5° Ciclo</mat-option>
+        </mat-select>
+        <mat-error *ngIf="ciclo.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field> &nbsp; <mat-label class="df"> en </mat-label> &nbsp;
+      <mat-form-field class="universidad"
+                      [hideRequiredMarker]="hideRequiredControl.value"
+                      [floatLabel]="floatLabelControl.value">
+        <mat-label>Seleccione la univaersidad donde estudia</mat-label>
+        <mat-select>
+          <mat-option value="Universidad Privada de Ciencias Aplicadas">Universidad Privada de Ciencias Aplicadas</mat-option>
+          <mat-option value="Universidad Ricardo Palma">Universidad Ricardo Palma</mat-option>
+          <mat-option value="Universidad de Concepción">Universidad de Concepción</mat-option>
+        </mat-select>
+        <mat-error *ngIf="universidad.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <br>
+      <br>
+      <mat-label class="autodescription">
+        Autodescripción
+      </mat-label>
+      <mat-card class="Botones">
+        <mat-card-content>
+          <button mat-raised-button color="primary" class="Guardar">
+              <span class="material-icons">
+                keyboard_arrow_down
+              </span>
+            Guardar cambios
+          </button>
+          <button mat-stroked-button color="primary" class="Regresar">
+              <span class="material-icons">
+                keyboard_arrow_left
+              </span>
+            Rergesar
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </mat-card-content>
+    <textarea class="descripción" name="description" cols="90" rows="10"></textarea>
+  </mat-card>
+  <br/>
+</div>
+
