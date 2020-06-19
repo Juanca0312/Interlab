@@ -13,12 +13,20 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import { DashboardStudentComponent } from './dashboard-student/dashboard-student.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule} from "@angular/material/list";
+import {MatCardModule} from "@angular/material/card";
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardStudentComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,22 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [LoginComponent],

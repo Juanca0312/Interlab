@@ -1,0 +1,259 @@
+
+<div class="example-container">
+
+  <mat-toolbar color="primary" class="encabezado">
+    <button mat-icon-button  (click)="snav.toggle()">
+      <span class="material-icons">menu</span>
+    </button>
+    &nbsp;
+    <span class="material-icons">
+      search
+    </span>
+    <mat-form-field class="buscar" appearance="fill">
+      <mat-label>Buscar</mat-label>
+      <input matInput>
+    </mat-form-field >
+    <div class="person">
+      <span class="material-icons">
+        account_circle
+      </span>
+    </div>&nbsp;
+    <div class="user">
+      <mat-label class="moveAvatar">John Doe</mat-label>
+      <button style="left: 1000px;" class="menu" mat-button [matMenuTriggerFor]="menu">
+        <span class="material-icons">
+          keyboard_arrow_down
+        </span>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Editar perfil</button>
+        <button mat-menu-item>Cerrar sesión</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list class="lista">
+        <p><mat-list-item><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item></p>
+        <p><mat-list-item><mat-icon>circle</mat-icon>Pasantias</mat-list-item></p>
+        <p><mat-list-item><mat-icon>circle</mat-icon>Crear Pasantia</mat-list-item></p>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <h1>Resultados de Busqueda</h1>
+
+
+
+
+      <table class="egt">
+        <tr>
+          <td style="padding: 30px;">
+            <mat-card class="example-card">
+
+              <div mat-card-image class="example-header-image">
+                <div>  .</div>
+                <mat-card-header class= "imagen1">
+
+                  <mat-card-title>Diseñador Web</mat-card-title>
+                  <mat-card-subtitle>Empresa ACME - Lima,Lima</mat-card-subtitle>
+                  <a class="botonazul" href="#">Postular</a>
+                  <p style=" transform: translateX(350px);">
+                    <label class="custom-radio-checkbox">
+                      <!-- Input oculto -->
+                      <input class="custom-radio-checkbox__input" type="checkbox" name="genero" value="hombre">
+                      <!-- Imagen en sustitucion -->
+                      <span class="custom-radio-checkbox__show custom-radio-checkbox__show--checkbox"></span>
+                      <!-- Texto -->
+                      <span class="custom-radio-checkbox__text"></span>
+                    </label>
+                  </p>
+                </mat-card-header>
+
+              </div>
+
+              <mat-card-content>
+
+                <p>
+                  Salario: S/ 5,000 a S/ 6,000 al mes
+                </p>
+                <h6 style="text-align:left;">
+                  S/. 34 por hora, S/. 72,000 anual
+                </h6>
+                <p>
+                  Trae tu talento a una compañía global de consultoría y tecnología, con presencia en los 5 continentes
+                  y más de 43.000 profesionales. Trabajarás en un entorno de soluciones y servicios innovadores para nuestros
+                  clientes en los principales sectores de actividad, aportándoles valor añadido. Participarás de la transformación
+                  de los negocios trabajando con profesionales de referencia.
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+              </mat-card-actions>
+            </mat-card>
+          </td>
+
+
+
+
+
+          <td  style="padding: 30px;">
+            <mat-card class="example-card">
+
+              <div mat-card-image class="example-header-image">
+                <div>  .</div>
+                <mat-card-header class= "imagen1">
+
+                  <mat-card-title>Diseñador Web</mat-card-title>
+                  <mat-card-subtitle>Empresa ACME - Lima,Lima</mat-card-subtitle>
+                  <a class="botonazul" href="#">Postular</a>
+                  <p style=" transform: translateX(350px);">
+                    <label class="custom-radio-checkbox">
+                      <!-- Input oculto -->
+                      <input class="custom-radio-checkbox__input" type="checkbox" name="genero" value="hombre">
+                      <!-- Imagen en sustitucion -->
+                      <span class="custom-radio-checkbox__show custom-radio-checkbox__show--checkbox"></span>
+                      <!-- Texto -->
+                      <span class="custom-radio-checkbox__text"></span>
+                    </label>
+                  </p>
+                </mat-card-header>
+
+              </div>
+
+              <mat-card-content>
+                <p>
+                  Salario: S/ 5,000 a S/ 6,000 al mes
+                </p>
+                <h6 style="text-align:left;">
+                  S/. 34 por hora, S/. 72,000 anual
+                </h6>
+                <p>
+                  Trae tu talento a una compañía global de consultoría y tecnología, con presencia en los 5 continentes
+                  y más de 43.000 profesionales. Trabajarás en un entorno de soluciones y servicios innovadores para nuestros
+                  clientes en los principales sectores de actividad, aportándoles valor añadido. Participarás de la transformación
+                  de los negocios trabajando con profesionales de referencia.
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+              </mat-card-actions>
+            </mat-card>
+
+          </td>
+
+        </tr>
+
+
+
+
+        <tr>
+
+          <td style="padding: 30px;">
+            <mat-card class="example-card">
+
+              <div mat-card-image class="example-header-image">
+                <div>  .</div>
+                <mat-card-header class= "imagen1">
+
+                  <mat-card-title>Diseñador Web</mat-card-title>
+                  <mat-card-subtitle>Empresa ACME - Lima,Lima</mat-card-subtitle>
+                  <a class="botonazul" href="#">Postular</a>
+                  <p style=" transform: translateX(350px);">
+                    <label class="custom-radio-checkbox">
+                      <!-- Input oculto -->
+                      <input class="custom-radio-checkbox__input" type="checkbox" name="genero" value="hombre">
+                      <!-- Imagen en sustitucion -->
+                      <span class="custom-radio-checkbox__show custom-radio-checkbox__show--checkbox"></span>
+                      <!-- Texto -->
+                      <span class="custom-radio-checkbox__text"></span>
+                    </label>
+                  </p>
+                </mat-card-header>
+
+              </div>
+
+              <mat-card-content>
+
+                <p>
+                  Salario: S/ 5,000 a S/ 6,000 al mes
+                </p>
+                <h6 style="text-align:left;">
+                  S/. 34 por hora, S/. 72,000 anual
+                </h6>
+                <p>
+                  Trae tu talento a una compañía global de consultoría y tecnología, con presencia en los 5 continentes
+                  y más de 43.000 profesionales. Trabajarás en un entorno de soluciones y servicios innovadores para nuestros
+                  clientes en los principales sectores de actividad, aportándoles valor añadido. Participarás de la transformación
+                  de los negocios trabajando con profesionales de referencia.
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+              </mat-card-actions>
+            </mat-card>
+          </td>
+
+          <td style="padding: 30px;">
+            <mat-card class="example-card">
+
+              <div mat-card-image class="example-header-image">
+                <div>  .</div>
+                <mat-card-header class= "imagen1">
+
+                  <mat-card-title>Diseñador Web</mat-card-title>
+                  <mat-card-subtitle>Empresa ACME - Lima,Lima</mat-card-subtitle>
+                  <a class="botonazul" href="#">Postular</a>
+                  <p style=" transform: translateX(350px);">
+                    <label class="custom-radio-checkbox">
+                      <!-- Input oculto -->
+                      <input class="custom-radio-checkbox__input" type="checkbox" name="genero" value="hombre">
+                      <!-- Imagen en sustitucion -->
+                      <span class="custom-radio-checkbox__show custom-radio-checkbox__show--checkbox"></span>
+                      <!-- Texto -->
+                      <span class="custom-radio-checkbox__text"></span>
+                    </label>
+                  </p>
+                </mat-card-header>
+
+              </div>
+
+              <mat-card-content>
+
+                <p>
+                  Salario: S/ 5,000 a S/ 6,000 al mes
+                </p>
+                <h6 style="text-align:left;">
+                  S/. 34 por hora, S/. 72,000 anual
+                </h6>
+                <p>
+                  Trae tu talento a una compañía global de consultoría y tecnología, con presencia en los 5 continentes
+                  y más de 43.000 profesionales. Trabajarás en un entorno de soluciones y servicios innovadores para nuestros
+                  clientes en los principales sectores de actividad, aportándoles valor añadido. Participarás de la transformación
+                  de los negocios trabajando con profesionales de referencia.
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+              </mat-card-actions>
+            </mat-card>
+          </td>
+
+
+        </tr>
+      </table>
+
+
+
+
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+
+
+
+</div>
+
+
+
