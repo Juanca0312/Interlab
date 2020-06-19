@@ -1,0 +1,33 @@
+.card {
+  margin: 0 8px 16px;
+  max-width: 100%;
+  max-height: 1000px;
+}
+.ib {
+  padding-left: 3em;
+  font-size: 1em;
+}
+.info {
+  padding-left: 5em;
+}
+.bt-sig {
+  background-color: #4B7BFF!important;
+  color: white;
+  margin-left : 90%;
+}
+.css {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+.llenar {
+  width: 100%;
+}
+.titulos {
+  position: absolute;
+  right: 10em;
+}
+.ti {
+  font-size: 2em;
+}
+

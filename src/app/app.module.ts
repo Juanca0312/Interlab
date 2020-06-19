@@ -22,6 +22,8 @@ import {MatCardModule} from "@angular/material/card";
 import { AppRoutingModule } from './app-routing.module';
 import { EditprofilestudentComponent } from './editprofilestudent/editprofilestudent.component';
 import { BuscarpasantiaComponent } from './buscarpasantia/buscarpasantia.component';
+import { DashboardCompanyComponent } from './dashboard-company/dashboard-company.component';
+import { CrearPasantiaPaso1Component } from './crear-pasantia-paso1/crear-pasantia-paso1.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { BuscarpasantiaComponent } from './buscarpasantia/buscarpasantia.compone
     RegisterComponent,
     DashboardStudentComponent,
     EditprofilestudentComponent,
-    BuscarpasantiaComponent
+    BuscarpasantiaComponent,
+    DashboardCompanyComponent,
+    CrearPasantiaPaso1Component
   ],
   imports: [
     BrowserModule,
