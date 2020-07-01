@@ -23,8 +23,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { EditprofilestudentComponent } from './editprofilestudent/editprofilestudent.component';
 import { BuscarpasantiaComponent } from './buscarpasantia/buscarpasantia.component';
 import { DashboardCompanyComponent } from './dashboard-company/dashboard-company.component';
+import { CrearPasantiaPaso1Component } from './crear-pasantia-paso1/crear-pasantia-paso1.component';
+import { MyRequestsComponent } from './my-requests/my-requests.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import { CreateInternshipComponent } from './create-internship/create-internship.component';
 import {MatStepperModule} from "@angular/material/stepper";
+
 
 
 @NgModule({
@@ -35,7 +40,8 @@ import {MatStepperModule} from "@angular/material/stepper";
     EditprofilestudentComponent,
     BuscarpasantiaComponent,
     DashboardCompanyComponent,
-    CreateInternshipComponent,
+    CrearPasantiaPaso1Component,
+    MyRequestsComponent,
     CreateInternshipComponent
   ],
   imports: [
@@ -66,7 +72,10 @@ import {MatStepperModule} from "@angular/material/stepper";
     MatListModule,
     MatCardModule,
     AppRoutingModule,
+    MatTableModule,
+    MatPaginatorModule,
     MatStepperModule
+
   ],
   providers: [],
   bootstrap: [DashboardCompanyComponent],
