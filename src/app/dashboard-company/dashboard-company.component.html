@@ -28,17 +28,16 @@
     <mat-sidenav #sidevar [mode]="mobileQuery.matches ? 'over' : 'side'"
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <mat-nav-list class="lista">
-        <p><mat-list-item><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item></p>
-        <p><mat-list-item ><mat-icon>circle</mat-icon>Pasantias</mat-list-item></p>
-        <p><mat-list-item routerLink="/internship-create"><mat-icon>circle</mat-icon>Crear Pasantia</mat-list-item></p>
+        <p><mat-list-item (click)="mostrar('Dashboard')"><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item></p>
+        <p><mat-list-item (click)="mostrar('Internship')"><mat-icon>circle</mat-icon>Pasantias</mat-list-item></p>
+        <p><mat-list-item (click)="mostrar('CreateInternship')"><mat-icon>circle</mat-icon>Crear Pasantia</mat-list-item></p>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content >
-      <router-outlet></router-outlet>
-      <router-outlet></router-outlet>
+      <app-create-internship *ngIf="showCreateInternship"></app-create-internship>
     </mat-sidenav-content>
-    `
+
   </mat-sidenav-container>
 
 </div>
