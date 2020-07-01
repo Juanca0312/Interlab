@@ -4,14 +4,6 @@
     <button mat-icon-button  (click)="snav.toggle()">
       <span class="material-icons">menu</span>
     </button>
-    &nbsp;
-    <span class="material-icons">
-      search
-    </span>
-    <mat-form-field class="buscar" appearance="fill">
-      <mat-label>Buscar</mat-label>
-      <input matInput>
-    </mat-form-field>
     <div class="person">
       <span class="material-icons">
         account_circle
@@ -38,7 +30,12 @@
       <img src="./assets/InterLab.png">
       <mat-nav-list class="lista">
         <p><mat-list-item><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item></p>
-        <p><mat-list-item><mat-icon>circle</mat-icon>Pasantias</mat-list-item></p>
+        <p><mat-list-item routerLink="/myrequests"><span class="material-icons">
+          view_list
+        </span>
+          Pasantias
+        </mat-list-item>
+        </p>
         <p><mat-list-item routerLink="/buscarpasantia"><mat-icon>circle</mat-icon>Buscar Pasantia</mat-list-item></p>
       </mat-nav-list>
     </mat-sidenav>

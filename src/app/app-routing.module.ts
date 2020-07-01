@@ -7,6 +7,7 @@ import {LoginComponent} from "./login/login.component";
 import {EditprofilestudentComponent} from "./editprofilestudent/editprofilestudent.component";
 import {BuscarpasantiaComponent} from "./buscarpasantia/buscarpasantia.component";
 import {CreateInternshipComponent} from "./create-internship/create-internship.component";
+import {MyRequestsComponent} from './my-requests/my-requests.component';
 
 const routes: Routes = [
   { path: 'login', component:LoginComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   {path: 'editprofile', component: EditprofilestudentComponent},
   {path: 'buscarpasantia', component: BuscarpasantiaComponent},
-  {path: 'create-internship', component: CreateInternshipComponent}
+  {path: 'create-internship', component: CreateInternshipComponent},
+  {path: 'myrequests', component: MyRequestsComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
