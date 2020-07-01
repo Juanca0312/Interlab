@@ -24,6 +24,9 @@ import { EditprofilestudentComponent } from './editprofilestudent/editprofilestu
 import { BuscarpasantiaComponent } from './buscarpasantia/buscarpasantia.component';
 import { DashboardCompanyComponent } from './dashboard-company/dashboard-company.component';
 import { CrearPasantiaPaso1Component } from './crear-pasantia-paso1/crear-pasantia-paso1.component';
+import { MyRequestsComponent } from './my-requests/my-requests.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -34,7 +37,8 @@ import { CrearPasantiaPaso1Component } from './crear-pasantia-paso1/crear-pasant
     EditprofilestudentComponent,
     BuscarpasantiaComponent,
     DashboardCompanyComponent,
-    CrearPasantiaPaso1Component
+    CrearPasantiaPaso1Component,
+    MyRequestsComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +67,9 @@ import { CrearPasantiaPaso1Component } from './crear-pasantia-paso1/crear-pasant
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [DashboardStudentComponent],
