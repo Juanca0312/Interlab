@@ -10,11 +10,11 @@ export class RegisterStudentComponent implements OnInit {
   private axiosClient: AxiosInstance;
   hide1 = true;
   hide2 = true;
-  username = "";
-  firstName = "";
-  lastName = "";
-  password = "";
-  password2 = "";
+  username = '';
+  firstName = '';
+  lastName = '';
+  password = '';
+  password2 = '';
 
   userId = null;
   auth = false;
@@ -22,7 +22,7 @@ export class RegisterStudentComponent implements OnInit {
     this.axiosClient = axios.create({
       timeout: 3000,
       headers: {
-        "X-Initialized-At": Date.now().toString()
+        'X-Initialized-At': Date.now().toString()
       }
     });
   }
@@ -38,10 +38,10 @@ export class RegisterStudentComponent implements OnInit {
       createdAt: new Date(),
       updateAt: new Date(),
       dateCreated: new Date(),
-    }).then(response=>{
+    }).then(response => {
         console.log(response.data.content);
-        console.log("New user id: ", response.data.content.id);
-        axios.post('https://interlab.azurewebsites.net/api/users/' + this.userId + '/profiles',{
+        console.log('New user id: ', response.data.content.id);
+        axios.post('https://interlab.azurewebsites.net/api/users/' + this.userId + '/profiles', {
           firstName: this.firstName,
           lastName: this.lastName,
           password: this.password,
@@ -57,7 +57,7 @@ export class RegisterStudentComponent implements OnInit {
           updateAt: new Date(),
           role: 'company',
         })
-          .then(response2=>{
+          .then(response2 => {
               console.log(response2.data.content);
           });
     });
