@@ -1,0 +1,112 @@
+<mat-card class="card">
+  <mat-vertical-stepper linear="true" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <mat-card-content class="ib">
+        <p class="ti">
+          <span class="material-icons">
+            edit
+          </span>
+          Basic Info
+        </p>
+        <form [formGroup]="firstFormGroup">
+          <mat-grid-list cols="10" rowHeight="5em">
+            <mat-grid-tile colspan="3">
+              <label class="titulos">Company Name</label>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="7">
+              <mat-form-field appearance="legacy" class="llenar">
+                <mat-label >Enter your name</mat-label>
+                <label>
+                  <input matInput formControlName="name" required>
+                </label>
+                <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+
+
+            <mat-grid-tile colspan="3">
+              <label class="titulos">Job Title</label>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="7">
+              <mat-form-field appearance="legacy" class="llenar">
+                <mat-label >Enter a title for your internship</mat-label>
+                <label>
+                  <input matInput formControlName="title" required>
+                </label>
+                <mat-error *ngIf="title.invalid">{{getErrorMessageTitle()}}</mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+
+
+            <mat-grid-tile colspan="3">
+              <label class="titulos">Location</label>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="7">
+              <mat-form-field appearance="legacy" class="llenar">
+                <mat-label >Enter a the ubication</mat-label>
+                <label>
+                  <input matInput formControlName="ubic" required>
+                </label>
+                <mat-error *ngIf="ubic.invalid">{{getErrorMessageUbic()}}</mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+
+
+            <mat-grid-tile colspan="3">
+              <label class="titulos">Salary</label>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="7">
+              <mat-form-field appearance="legacy" class="llenar">
+                <mat-label>Amount</mat-label>
+                <input matInput type="number">
+                <span matPrefix>$&nbsp;</span>
+                <span matSuffix>.00</span>
+              </mat-form-field>
+            </mat-grid-tile>
+
+
+          </mat-grid-list>
+        </form>
+
+
+        <div>
+          <button mat-stroked-button matStepperNext>Next</button>
+        </div>
+      </mat-card-content>
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup">
+      <mat-card-content class="ib">
+        <p class="ti">
+          <span class="material-icons">
+            edit
+          </span>
+          Job Description
+        </p>
+
+        <form [formGroup]="secondFormGroup">
+          <mat-grid-list cols="10" rowHeight="15vw">
+            <mat-grid-tile colspan="3">
+              <label class="titulos">Job Description</label>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="7">
+              <mat-form-field class="llenar" appearance="fill">
+                <mat-label>Textarea</mat-label>
+                <label>
+                  <textarea  matInput formControlName="description"></textarea>
+                </label>
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </form>
+
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+
+      </mat-card-content>
+    </mat-step>
+  </mat-vertical-stepper>
+
+</mat-card>
