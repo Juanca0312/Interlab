@@ -23,7 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { EditprofilestudentComponent } from './editprofilestudent/editprofilestudent.component';
 import { BuscarpasantiaComponent } from './buscarpasantia/buscarpasantia.component';
 import { DashboardCompanyComponent } from './dashboard-company/dashboard-company.component';
-import { CrearPasantiaPaso1Component } from './crear-pasantia-paso1/crear-pasantia-paso1.component';
+import { CreateInternshipComponent } from './create-internship/create-internship.component';
+import {MatStepperModule} from "@angular/material/stepper";
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { CrearPasantiaPaso1Component } from './crear-pasantia-paso1/crear-pasant
     EditprofilestudentComponent,
     BuscarpasantiaComponent,
     DashboardCompanyComponent,
-    CrearPasantiaPaso1Component
+    CreateInternshipComponent,
+    CreateInternshipComponent
   ],
   imports: [
     BrowserModule,
@@ -63,10 +65,11 @@ import { CrearPasantiaPaso1Component } from './crear-pasantia-paso1/crear-pasant
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatStepperModule
   ],
   providers: [],
-  bootstrap: [DashboardStudentComponent],
+  bootstrap: [DashboardCompanyComponent],
   exports: [
     FormsModule,
     ReactiveFormsModule
