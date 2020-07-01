@@ -1,59 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;800&display=swap');
 
-.column{
-  float: left;
-  width: 50%;
+.grid-container {
+  display: grid;
+  grid-template-columns: 41.65% 58.35%;
+  background-color: white;
+  font-family: 'Khula', sans-serif !important;
 }
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 70%;
-  font-family: 'Khula', sans-serif;
+.grid-item {
+  padding: 2vw;
 }
-
-.example-full-width {
+.right_banner{
+  color: white;
+  background-color: #282a3f;
+}
+.right-form{
   width: 100%;
-  padding-bottom: 1em;
+  font-family: 'Khula', sans-serif !important;
+  margin-top: 10vw;
 }
-
-mat-grid-tile {
-
+.welcome_title{
+  font-size: 4vw;
+  margin-left: 5vw;
+  margin-bottom: 7vw;
 }
-
-.example-container .mat-form-field + .mat-form-field {
-  margin-left: 8px;
+.interlab_title{
+  font-size: 7vw;
+  margin-left: 5vw;
+  margin-bottom: 10vw;
 }
-
-.example-container .mat-form-field {
-  width: 220px;
+.login_title{
+  font-size: 3vw;
+  margin-left: 5vw;
 }
-
-.example-container form {
-  margin-bottom: 20px;
+.logo{
+  width: 15%;
+  height: 15%;
+  margin-bottom: 4vw;
 }
-
-.example-container form > * {
-  margin: 5px 0;
+.btn_about{
+  background-color: lightgrey !important;
+  border-radius: 20px;
+  width: 60%;
+  text-align: center;
+  display: block;
+  margin-top: 2em;
+  margin-left: 6vw;
+  text-decoration: none !important;
 }
-
-.example-container .mat-radio-button {
-  margin: 0 12px;
+a{
+  text-decoration: none !important;
+  color: black;
 }
-
-img {
-  object-fit: fill;
+.text-field1{
+  width: 90%;
+  margin-bottom: 2vw;
 }
-.welcome {
-  height: 125%;
-  width: 100%;
-}
-
-.logo {
-  position: absolute;
-  top: 2%;
-  left: 2%;
-  height: 10%;
-  width: 10%;
+.text-field2{
+  width: 90%;
+  margin-bottom: 2vw;
 }
 
 .btn_register {
@@ -62,23 +65,57 @@ img {
   width: 80%;
   text-align: center;
   display: block;
-  margin: 2em auto auto auto;
+  margin-top: 2em;
+  margin-left: 2em;
   text-decoration: none !important;
+  color: white !important;
 }
 
-a {
-  text-decoration: none !important;
-  color: #137ea8;
-  padding: 0;
-  margin-left: 0.5em;
+.about{
+  margin-top: 4em;
+}
+.about_text{
+  text-align: justify;
 }
 
 mat-label {
   color: black;
   font-size: 1.1em;
-
 }
 
 mat-form-field {
   margin: 0.5em auto auto 0.5em;
 }
+
+.registerCompany{
+  margin-left: 3vw;
+}
+
+
+@media only screen and (max-width: 1000px){
+  .right_banner{
+    display: none;
+    width: 0;
+  }
+  .registerStudent{
+    margin-left: 3vw;
+  }
+  .logo{
+    width: 15%;
+    height: 15%;
+    margin-bottom: 4vw;
+    margin-top:  1vw;
+    margin-left: 35vw;
+  }
+  .btn_about{
+    margin-left: 20vw;
+  }
+  .btn_register{
+    margin-left: 10vw;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto !important;
+  }
+}
+
