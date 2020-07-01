@@ -1,4 +1,7 @@
 
+
+
+
 .example-container {
   display: flex;
   flex-direction: column;
@@ -11,6 +14,7 @@
 
 .example-is-mobile .example-toolbar {
   position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   z-index: 2;
 }
 
@@ -19,23 +23,49 @@ h1.example-app-name {
 }
 
 .example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
   flex: 1;
 }
 
 .example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
 }
 
+.buscar{
+  font-size: 15px;
+}
+
 .person{
-  margin-left: 70vw;
+  transform: translateX(660px);
 }
 
 .user{
-  margin-right: 6vw;
+  transform: translateX(660px);
 }
 
+.pading{
+  padding-left: 50px;
+}
+
+.position-icon{
+  transform: translateY(5px);
+  padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+
 .example-card {
-  max-width: 650%;
+  max-width: 650px;
+  border-radius: 20px 20px 1px 1px;
 }
 
 .smaltype{
@@ -53,7 +83,8 @@ h1.example-app-name {
 }
 .example-header-image {
   width: 683px; height: 80px;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYi3UVxHkW7KBbri1vlH8JoFzgdyaIA8EOEj9SoFl2J9Nw8ga_&usqp=CAU');
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9sGTfquMDW2uvTdMmH9YlbkREVR7yvaGGMg&usqp=CAU');
+  border-radius: 1px 1px 20px 20px;
   background-size: cover;
 }
 
@@ -134,7 +165,7 @@ h1.example-app-name {
   background-image: url(https://i.ibb.co/wdh6sjB/Estrella-Checked.png);
 }
 
-
+/*hola*/
 
 
 
