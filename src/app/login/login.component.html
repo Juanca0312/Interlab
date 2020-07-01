@@ -1,32 +1,50 @@
-
-<mat-grid-list cols="20" rowHeight="100%">
-  <mat-grid-tile colspan="8">
-    <form class="example-form">
-      <img class="logo" src="assets/interlab_logo.png">
-
-      <mat-form-field class="example-full-width" floatLabel="always">
-        <mat-label>Correo Electrónico</mat-label>
-        <input matInput placeholder="avelasquez@gmail.com">
+<div class="grid-container">
+  <div class="grid-item">
+      <div>
+        <img class="logo" src="assets/interlab_logo.png" alt="">
+      </div>
+      <mat-form-field class="text-field1" floatLabel="always">
+        <mat-label>E-mail</mat-label>
+        <label>
+          <input (keyup)="getUsername($event)" matInput placeholder="student@gmail.com">
+        </label>
       </mat-form-field>
 
-      <mat-form-field class="example-full-width" floatLabel="always">
-        <mat-label>Contraseña</mat-label>
-        <input matInput [type]="hide1 ? 'password' : 'text'">
+      <mat-form-field class="text-field2"  floatLabel="always">
+        <mat-label>Password</mat-label>
+        <label>
+          <input (keyup)="getPassword($event)" matInput [type]="hide1 ? 'password' : 'text'">
+        </label>
         <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide1">
           <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
+      <div class="grid-container">
+        <div class="grid-item registerStudent">
+          <a routerLink="/dashboard-student">Register as a Student</a>
+        </div>
+        <div class="grid-item registerCompany">
+          <a routerLink="/dashboard-student">Register as a Company</a>
+        </div>
+      </div>
+      <button (click)="getUsers()" class="btn_register" mat-raised-button>Log In</button>
+      <div class="about">
+        <p class="about_title">What Is InterLab?</p>
+        <p class="about_text">Here at InterLab, we love Internships! Make sure to create an account to get access to the best internships offers from all around the globe.</p>
+        <a href="https://8rb.github.io/Interlab-Landing-Page/" target="_blank">
+        <button class="btn_about" mat-raised-button>About Us</button>
+        </a>
+      </div>
+  </div>
+  <div class="grid-item right_banner">
+    <div class="right-form">
+        <p class="welcome_title">Welcome to</p>
+        <h1 class="interlab_title">Interlab</h1>
+        <p class="login_title">Log in with your account</p>
+    </div>
+  </div>
+</div>
 
-      <a routerLink="/register">Crear Cuenta</a>
-      <button routerLink="/dashboard-student" class="btn_register" mat-raised-button color="primary">Iniciar Sesión</button>
-    </form>
-
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="12">
-    <img class="welcome" src="../../assets/login.png" alt="login">
-  </mat-grid-tile>
-</mat-grid-list>
 
 
 

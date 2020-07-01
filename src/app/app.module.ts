@@ -27,6 +27,9 @@ import { CrearPasantiaPaso1Component } from './crear-pasantia-paso1/crear-pasant
 import { MyRequestsComponent } from './my-requests/my-requests.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { CreateInternshipComponent } from './create-internship/create-internship.component';
+import {MatStepperModule} from "@angular/material/stepper";
+
 
 
 @NgModule({
@@ -38,7 +41,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     BuscarpasantiaComponent,
     DashboardCompanyComponent,
     CrearPasantiaPaso1Component,
-    MyRequestsComponent
+    MyRequestsComponent,
+    CreateInternshipComponent
   ],
   imports: [
     BrowserModule,
@@ -69,10 +73,12 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatCardModule,
     AppRoutingModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatStepperModule
+
   ],
   providers: [],
-  bootstrap: [DashboardStudentComponent],
+  bootstrap: [DashboardCompanyComponent],
   exports: [
     FormsModule,
     ReactiveFormsModule
