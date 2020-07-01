@@ -1,0 +1,143 @@
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 41.65% 58.35%;
+  background-color: white;
+  font-family: 'Khula', sans-serif !important;
+}
+.grid-item {
+  padding: 2vw;
+}
+.right_banner{
+  color: white;
+  background-color: #447dd4;
+}
+.right-form{
+  width: 100%;
+  font-family: 'Khula', sans-serif !important;
+  margin-top: 10vw;
+}
+.welcome_title{
+  font-size: 4vw;
+  margin-left: 5vw;
+  margin-bottom: 7vw;
+}
+.interlab_title{
+  font-size: 7vw;
+  margin-left: 5vw;
+  margin-bottom: 10vw;
+}
+.register_title{
+  font-size: 3vw;
+  margin-left: 5vw;
+}
+.logo{
+  width: 10%;
+  height: 10%;
+  margin-bottom: 1vw;
+}
+.btn_about{
+  background-color: lightgrey !important;
+  border-radius: 20px;
+  width: 60%;
+  text-align: center;
+  display: block;
+  margin-top: 2em;
+  margin-left: 6vw;
+  text-decoration: none !important;
+}
+a{
+  text-decoration: none !important;
+  color: black;
+}
+.text-field1{
+  width: 90%;
+}
+.text-field2{
+  width: 90%;
+  margin-bottom: 1vw;
+}
+.text-field_first_name{
+  margin-left: -1vw;
+  padding-left: 0!important;
+}
+.text-field_last_name{
+  margin-left: 0.5vw;
+  width: 90%;
+}
+.btn_register {
+  background-color: #447dd4 !important;
+  border-radius: 20px;
+  width: 80%;
+  text-align: center;
+  display: block;
+  margin-top: 1em;
+  margin-left: 2em;
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.about{
+  margin-top: 4em;
+}
+.about_text{
+  text-align: justify;
+}
+
+mat-label {
+  color: black;
+  font-size: 1.1em;
+}
+
+mat-form-field {
+  margin: 0.5em auto auto 0.5em;
+}
+
+.already{
+  margin-top: -2vw;
+  margin-bottom: -1vw;
+  margin-left: 3vw;
+}
+.areCompany{
+  margin-top: -2vw;
+  margin-bottom: -1vw;
+}
+
+
+@media only screen and (max-width: 1000px){
+
+  .right_banner{
+    display: none;
+  }
+  .already{
+    margin-left: 0 !important;
+  }
+  .text-field_first_name{
+    margin-left: -1vw;
+    padding-left: 0!important;
+    width: 93%;
+  }
+  .text-field_last_name{
+    margin-left: -1vw;
+    padding-left: 0!important;
+    width: 93%;
+  }
+  .logo{
+    width: 15%;
+    height: 15%;
+    margin-bottom: 4vw;
+    margin-top:  1vw;
+    margin-left: 35vw;
+  }
+  .btn_about{
+    margin-left: 20vw;
+  }
+  .btn_register{
+    margin-left: 10vw;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto !important;
+  }
+}
+
