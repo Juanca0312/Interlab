@@ -31,39 +31,34 @@ export class RegisterCompanyComponent implements OnInit {
   }
 
   createUser(){
-    axios.post('https://interlab.azurewebsites.net/api/users',{
+    axios.post('https://interlab.azurewebsites.net/api/users', {
       username: this.username,
       password: this.password,
       email: this.username,
-      createdAt: new Date(),
-      updateAt: new Date(),
-      dateCreated: new Date(),
     }).then(response => {
-      console.log(response.data.content);
-      console.log('New user id: ', response.data.content.id);
-      axios.post('https://interlab.azurewebsites.net/api/users/' + this.userId + '/profiles', {
-        firstName: this.firstName,
-        lastName: this.lastName,
-        password: this.password,
-        field: '',
-        phone: '',
-        description: '',
-        country: '',
-        city: '',
-        university: '',
-        degree: '',
-        semester: null,
-        createdAt: new Date(),
-        updateAt: new Date(),
-        role: 'student',
+      console.log(response.data);
+      console.log('New user id: ', response.data.id);
+      this.userId = response.data.id;
+      console.log(this.firstName, this.lastName);
+      axios.post('https://interlab.azurewebsites.net/api/users/' + this.userId + '/profiles' , {
+        "role": "company",
+        "firstName": this.firstName,
+        "lastName": this.lastName,
+        "field": "Companies",
+        "phone": "+51 ",
+        "description": "Interlab user",
+        "country": "Peru",
+        "city": "Lima",
+        "university": "MIT",
+        "degree": "SWE",
+        "semester": null
       })
         .then(response2 => {
-          console.log(response2.data.content);
-        });
+          console.log(response2.data);
+        }).catch(error => {
+        console.log(error);
+      });
     });
-
-    console.log(this.username, this.firstName, this.lastName, this.password, this.password2);
-
   }
   getUsername(event: any) { // without type info
     this.username = event.target.value;
