@@ -62,7 +62,7 @@ h1.example-app-name {
 }
 
 .Guardar{
-  transform: translateX(780px);
+  transform: translateX(60vw);
 }
 
 .Regresar{
@@ -100,25 +100,30 @@ h1.example-app-name {
 @media only screen and (max-width: 1000px){
 
   .sector{
-    width: 45vw !important;
+    width: 40vw !important;
+    margin-top: -3vw;
   }
 
   .Sg{
     padding-left: 7vw;
+    margin-top: -3vw;
   }
 
   .ciclo{
-    width: 45vw !important;
-margin-left: 4.5vw;
+    width: 40vw !important;
+margin-left: 2.5vw;
+    margin-top: -3vw;
   }
 
   .cursando{
     margin-right: 5vw;
     padding-left: 7vw !important;
+    margin-top: -3vw;
   }
 
   .Botones{
-    width: 80vw !important;
+    width: 70vw !important;
+    height: 5vw !important;
   }
 
   .Regresar{
@@ -126,43 +131,42 @@ margin-left: 4.5vw;
   }
 
   .Guardar{
-    margin-right: 40vw;
+    margin-right: 30vw;
   }
 
   .df{
-margin-left: 8vw;
+padding-left: 8vw !important;
   }
 
   .universidad{
-    width: 45vw !important;
+    width: 40vw !important;
     margin-top: -15vw;
-    margin-left: 17.5vw;
+    margin-left: 14vw;
   }
 
   .autodescription{
-    padding-left: 5vw;
+    padding-left: 2vw;
   }
 
   .descripción{
-    width: 45vw !important;
-    height: 30vw;
-    transform: translateX(30vw) translateY(-4vw) !important;
-    margin-top: -30vw;
+    width: 40vw !important;
+    height: 30vw !important;
+    transform: translateX(25vw) translateY(-4vw) !important;
+    margin-top: -15vw;
   }
 
   .edit{
-    width: 80vw !important;
-    height: 90vw !important;
+    width: 70vw !important;
+    height: 100vw !important;
   }
 
   .Guardar{
-    transform: translateX(45vw) translateY(4vw) !important;
-    margin-top: 10vw;
+    margin-left: -20vw;
   }
   .Regresar{
-    margin-left: 5vw;
+    margin-left: 2vw;
     margin-bottom: 5vw;
-    transform: translateY(-4vw);
+    transform: translateY(-6vw);
   }
 
   .example-container{

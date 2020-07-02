@@ -5,11 +5,11 @@ import {MatPaginator} from "@angular/material/paginator";
 import {MediaMatcher} from "@angular/cdk/layout";
 
 @Component({
-  selector: 'app-buscarpasantia',
-  templateUrl: './buscarpasantia.component.html',
-  styleUrls: ['./buscarpasantia.component.css']
+  selector: 'app-find-internship',
+  templateUrl: './find-internship.component.html',
+  styleUrls: ['./find-internship.component.css']
 })
-export class BuscarpasantiaComponent implements OnInit {
+export class FindInternshipComponent implements OnInit {
 
   checked = false;
   mobileQuery: MediaQueryList;
@@ -38,9 +38,4 @@ export class BuscarpasantiaComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
   }
-
-  ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
-  }
-
 }
