@@ -38,10 +38,4 @@ export class DashboardStudentComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
   }
-
-  ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
-  }
-
-
 }
