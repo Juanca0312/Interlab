@@ -1,34 +1,70 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  background-color: white;
+  font-family: 'Khula', sans-serif !important;
+}
+.grid-item {
+  padding: 1.8vw 2vw 1vw 2vw;
+}
+.text-field{
+  width: 100%;
+}
+.text-area{
+  padding-bottom: 10em;
+}
 .card {
-  margin: 0 8px 16px;
+  margin-top: -3em;
   max-width: 100%;
   max-height: 1000px;
 }
-.ib {
-  padding-left: 3em;
+.content {
+  margin-left: 2vw;
   font-size: 1em;
 }
-.info {
-  padding-left: 5em;
+
+.titles {
+  margin-top: 1.35em!important;
 }
-.bt-sig {
-  background-color: #4B7BFF!important;
-  color: white;
-  margin-left : 90%;
-}
-.css {
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-}
-.llenar {
-  width: 100%;
-  height: 100%!important;
-}
-.titulos {
-  position: absolute;
-  right: 10em;
-}
-.ti {
+.title {
+  margin-top: 1em;
   font-size: 2em;
+}
+
+.btn_Next{
+  margin-top: 2vw;
+  width: 8em;
+  background-color: #4B7BFF;
+  color: white;
+  float: right;
+  margin-right: 11vw;
+}
+.stepper{
+  margin-left: -1em;
+  margin-top: 2em !important;
+}
+.description{
+  width: 600px;
+  height: 120px;
+  border-bottom: 1px solid black;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .btn_Next{
+    margin-right: 0!important;
+    width: 5em;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto !important;
+  }
+  .content {
+    margin-left: 0 !important;
+  }
+  .stepper{
+    margin-left: -1.5em;
+    margin-top: -1em !important;
+  }
 }
 

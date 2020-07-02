@@ -1,96 +1,121 @@
 <mat-card class="card">
-  <mat-vertical-stepper linear="true" #stepper>
+  <mat-vertical-stepper linear="true" #stepper class="stepper">
     <mat-step [stepControl]="firstFormGroup">
-      <mat-card-content class="ib">
-        <p class="ti">
-          <span class="material-icons">
-            edit
-          </span>
+      <mat-card-content class="content">
+        <p class="title">
+          <span class="material-icons">edit</span>
           Basic Info
         </p>
         <form [formGroup]="firstFormGroup">
-          <mat-grid-list cols="10" rowHeight="5em">
-            <mat-grid-tile colspan="3">
-              <label class="titulos">Company Name</label>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="7">
-              <mat-form-field appearance="legacy" class="llenar">
+          <div class="grid-container">
+            <div class="grid-item">
+              <p class="titles">Company Name</p>
+            </div>
+            <div class="grid-item">
+              <mat-form-field class="text-field">
                 <mat-label >Enter your name</mat-label>
                 <label>
                   <input matInput formControlName="name" required>
                 </label>
                 <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error>
               </mat-form-field>
-            </mat-grid-tile>
+            </div>
 
-
-            <mat-grid-tile colspan="3">
-              <label class="titulos">Job Title</label>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="7">
-              <mat-form-field appearance="legacy" class="llenar">
+            <div class="grid-item">
+              <p class="titles">Job Title</p>
+            </div>
+            <div class="grid-item">
+              <mat-form-field class="text-field">
                 <mat-label >Enter a title for your internship</mat-label>
                 <label>
                   <input matInput formControlName="title" required>
                 </label>
                 <mat-error *ngIf="title.invalid">{{getErrorMessageTitle()}}</mat-error>
               </mat-form-field>
-            </mat-grid-tile>
+            </div>
 
-
-            <mat-grid-tile colspan="3">
-              <label class="titulos">Location</label>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="7">
-              <mat-form-field appearance="legacy" class="llenar">
-                <mat-label >Enter a the ubication</mat-label>
+            <div class="grid-item">
+              <p class="titles">Location</p>
+            </div>
+            <div class="grid-item">
+              <mat-form-field class="text-field">
+                <mat-label >Enter the location</mat-label>
                 <label>
                   <input matInput formControlName="ubic" required>
                 </label>
-                <mat-error *ngIf="ubic.invalid">{{getErrorMessageUbic()}}</mat-error>
+                <mat-error *ngIf="location.invalid">{{getErrorMessageLocation()}}</mat-error>
               </mat-form-field>
-            </mat-grid-tile>
+            </div>
 
 
-            <mat-grid-tile colspan="3">
-              <label class="titulos">Salary</label>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="7">
-              <mat-form-field appearance="legacy" class="llenar">
+            <div class="grid-item">
+              <p class="titles">Salary</p>
+            </div>
+            <div class="grid-item">
+              <mat-form-field class="text-field">
                 <mat-label>Amount</mat-label>
-                <input matInput type="number">
-                <span matPrefix>$&nbsp;</span>
+                <label>
+                  <input matInput type="number">
+                </label>
+                <span matPrefix>$</span>
                 <span matSuffix>.00</span>
               </mat-form-field>
-            </mat-grid-tile>
-
-
-          </mat-grid-list>
+            </div>
+          </div>
         </form>
-
-
         <div>
-          <button mat-stroked-button matStepperNext>Next</button>
+          <button mat-stroked-button matStepperNext class="btn_Next">Next</button>
         </div>
       </mat-card-content>
     </mat-step>
 
     <mat-step [stepControl]="secondFormGroup">
+      <mat-card-content class="content">
+        <p class="title">
+          <span class="material-icons">edit</span>
+          Job Description
+        </p>
+
+        <form [formGroup]="secondFormGroup">
+          <div class="grid-container">
+            <div class="grid-item">
+              <label class="titles">Job Description</label>
+            </div>
+            <div class="grid-item">
+              <mat-form-field class="text-field">
+                <mat-label>Description</mat-label>
+                <label>
+                  <textarea class="text-area"  matInput formControlName="description"></textarea>
+                </label>
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+
+        <div>
+          <button mat-button matStepperPrevious class="btn_back">Back</button>
+          <button mat-stroked-button matStepperNext class="btn_Next">Next</button>
+        </div>
+
+      </mat-card-content>
+    </mat-step>
+
+    <mat-step [stepControl]="thirdFormGroup">
       <mat-card-content class="ib">
         <p class="ti">
           <span class="material-icons">
             edit
           </span>
-          Job Description
+          Profile Requirements
         </p>
 
-        <form [formGroup]="secondFormGroup">
+        <form [formGroup]="thirdFormGroup">
           <mat-grid-list cols="10" rowHeight="15vw">
             <mat-grid-tile colspan="3">
-              <label class="titulos">Job Description</label>
+              <label class="titulos">Profile Requirements</label>
             </mat-grid-tile>
             <mat-grid-tile colspan="7">
-              <mat-form-field class="llenar" appearance="fill">
+              <mat-form-field>
                 <mat-label>Textarea</mat-label>
                 <label>
                   <textarea  matInput formControlName="description"></textarea>
