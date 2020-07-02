@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import axios from 'axios';
 import {AxiosInstance} from 'axios';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   password = '';
   userId = null;
   auth = false;
-  constructor() {
+  constructor(private router: Router) {
     this.axiosClient = axios.create({
       timeout: 3000,
       headers: {
@@ -56,6 +57,7 @@ export class LoginComponent implements OnInit {
               }
               else if (response2.data.content[0].role === 'company'){
                 alert('Welcome Company');
+                this.router.navigateByUrl('/dashboardCompany');
                 // push company dashboard
               }
               else{
