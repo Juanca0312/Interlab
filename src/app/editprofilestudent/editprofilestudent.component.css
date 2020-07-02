@@ -85,10 +85,6 @@ h1.example-app-name {
   padding-left: 2em;
 }
 
-.buscar{
-  font-size: 15px;
-}
-
 .person{
   transform: translateX(660px);
 }
@@ -99,4 +95,77 @@ h1.example-app-name {
 
 .user{
   transform: translateX(660px);
+}
+
+@media only screen and (max-width: 1000px){
+
+  .sector{
+    width: 45vw !important;
+  }
+
+  .Sg{
+    padding-left: 7vw;
+  }
+
+  .ciclo{
+    width: 45vw !important;
+margin-left: 4.5vw;
+  }
+
+  .cursando{
+    margin-right: 5vw;
+    padding-left: 7vw !important;
+  }
+
+  .Botones{
+    width: 80vw !important;
+  }
+
+  .Regresar{
+    margin-right: 20vw;
+  }
+
+  .Guardar{
+    margin-right: 40vw;
+  }
+
+  .df{
+margin-left: 8vw;
+  }
+
+  .universidad{
+    width: 45vw !important;
+    margin-top: -15vw;
+    margin-left: 17.5vw;
+  }
+
+  .autodescription{
+    padding-left: 5vw;
+  }
+
+  .descripción{
+    width: 45vw !important;
+    height: 30vw;
+    transform: translateX(30vw) translateY(-4vw) !important;
+    margin-top: -30vw;
+  }
+
+  .edit{
+    width: 80vw !important;
+    height: 90vw !important;
+  }
+
+  .Guardar{
+    transform: translateX(45vw) translateY(4vw) !important;
+    margin-top: 10vw;
+  }
+  .Regresar{
+    margin-left: 5vw;
+    margin-bottom: 5vw;
+    transform: translateY(-4vw);
+  }
+
+  .example-container{
+    margin-right: 5vw;
+  }
 }
