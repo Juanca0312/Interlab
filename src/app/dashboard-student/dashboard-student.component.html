@@ -1,6 +1,6 @@
 <div class="example-container">
   <mat-toolbar color="primary" class="encabezado"
-               [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+               [style.marginTop.px]="mobileQuery.matches ? 0 : 5">
     <button mat-icon-button  (click)="snav.toggle()">
       <span class="material-icons">menu</span>
     </button>
@@ -17,29 +17,33 @@
         </span>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="../editprofile">Editar perfil</button>
+        <button mat-menu-item routerLink="../editProfile">Editar perfil</button>
         <button mat-menu-item>Cerrar sesión</button>
       </mat-menu>
     </div>
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container"
-                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+                         [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <img src="./assets/InterLab.png">
       <mat-nav-list class="lista">
-        <p><mat-list-item><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item></p>
-        <p><mat-list-item routerLink="/myrequests"><span class="material-icons">
-          view_list
-        </span>
-          Pasantias
+        <p><mat-list-item class="xd"><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item></p>
+        <p><mat-list-item class="xd" routerLink="/myRequests"><mat-icon>view_list</mat-icon>
+          My Requests
         </mat-list-item>
         </p>
-        <p><mat-list-item routerLink="/buscarpasantia"><mat-icon>circle</mat-icon>Buscar Pasantia</mat-list-item></p>
+        <mat-list-item class="xd" routerLink="/findInternship">
+          <mat-icon>
+          search
+        </mat-icon>
+          Find Internships
+        </mat-list-item>
+
       </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content class="content">
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
