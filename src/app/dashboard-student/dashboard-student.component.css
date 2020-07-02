@@ -34,106 +34,19 @@ h1.example-app-name {
   margin-right: 6vw;
 }
 
-.example-card {
-  max-width: 650%;
+@media only screen and (max-width: 1000px){
+
+  .person{
+    margin-left: 50vw;
+  }
+  .user{
+    margin-right: 10vw;
+  }
+
+  .xd{
+    display: none;
+  }
 }
-
-.smaltype{
-  font-size: 10%;
-}
-
-.botonazul {
-  transform: translateX(300px);
-  width: 42px; height: 20px;
-  padding: 1px 10px;
-  background-color: #2271b3; /* Color Rojo */
-  color: white!important;
-  font-size: 80%;
-  border-radius: 10px;
-}
-.example-header-image {
-  width: 683px; height: 80px;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYi3UVxHkW7KBbri1vlH8JoFzgdyaIA8EOEj9SoFl2J9Nw8ga_&usqp=CAU');
-  background-size: cover;
-}
-
-
-
-.moveAvatar {
-  position: relative;
-  top: 1px; /* ajustar los valores para mover la imagen */
-  left: 1000px;
-
-}
-
-
-
-
-
-.example-section {
-
-  display: flex;
-  align-content: center;
-  align-items: center;
-  height: 60px;
-}
-
-.example-margin {
-  transform: translateX(300px);
-  margin: 0 10px;
-}
-
-
-
-
-
-
-
-
-
-.custom-radio-checkbox {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-family: arial;
-}
-
-/* Modificador para dar la imagen de checkbox */
-.custom-radio-checkbox__show--checkbox {
-  background-image: url(https://i.ibb.co/L9ghYN3/Estrella-UNChecked.png);
-}
-
-/* Modificador para dar la imagen de radio */
-.custom-radio-checkbox__show--radio {
-  background-image: url(https://i.ibb.co/L9ghYN3/Estrella-UNChecked.png);
-}
-
-/* Oculta input original */
-.custom-radio-checkbox > .custom-radio-checkbox__input {
-  display: none;
-}
-
-/* Radio personalizado usando <span> */
-.custom-radio-checkbox > .custom-radio-checkbox__show {
-
-  display: inline-block;
-  transform: translateY(-11px);
-  width: 40px;
-  height: 40px;
-  margin-right: .5rem;
-  background-size: cover;
-}
-
-/* Cambia el checkbox personalizado cuando es pulsado */
-.custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--checkbox {
-  background-image: url(https://i.ibb.co/wdh6sjB/Estrella-Checked.png);
-}
-
-/* Cambia el radio personalizado cuando es pulsado */
-.custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--radio {
-  background-image: url(https://i.ibb.co/wdh6sjB/Estrella-Checked.png);
-}
-
 
 
 
