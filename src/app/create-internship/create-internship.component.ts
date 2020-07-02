@@ -11,9 +11,10 @@ export class CreateInternshipComponent implements OnInit{
   constructor(private _formBuilder: FormBuilder) { }
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  thirdFormGroup: FormGroup;
   name = new FormControl('', [Validators.required]);
   title = new FormControl('', [Validators.required]);
-  ubic = new FormControl('', [Validators.required]);
+  location = new FormControl('', [Validators.required]);
   description = new FormControl('', [Validators.required]);
 
   getErrorMessageName() {
@@ -28,8 +29,8 @@ export class CreateInternshipComponent implements OnInit{
     }
     return this.title.hasError('title') ? 'Not a valid title' : '';
   }
-  getErrorMessageUbic() {
-    if (this.ubic.hasError('required')) {
+  getErrorMessageLocation() {
+    if (this.location.hasError('required')) {
       return 'You must enter a value';
     }
     return this.title.hasError('title') ? 'Not a valid title' : '';
@@ -44,6 +45,9 @@ export class CreateInternshipComponent implements OnInit{
     });
     this.secondFormGroup = this._formBuilder.group({
         description: ['', Validators.required],
+    });
+    this.thirdFormGroup = this._formBuilder.group({
+      description: ['', Validators.required],
     });
   }
 }
