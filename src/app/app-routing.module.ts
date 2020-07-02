@@ -7,13 +7,15 @@ import {LoginComponent} from './login/login.component';
 import {EditprofilestudentComponent} from './editprofilestudent/editprofilestudent.component';
 import {BuscarpasantiaComponent} from './buscarpasantia/buscarpasantia.component';
 import {CreateInternshipComponent} from './create-internship/create-internship.component';
+import {MyRequestsComponent} from './my-requests/my-requests.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'dashboardStudent', component: DashboardStudentComponent},
   { path: 'editProfile', component: EditprofilestudentComponent},
   { path: 'findInternship', component: BuscarpasantiaComponent},
-  { path: 'createInternship', component: CreateInternshipComponent}
+  { path: 'createInternship', component: CreateInternshipComponent},
+  {path: 'myRequests', component: MyRequestsComponent}
 
 ];
 
