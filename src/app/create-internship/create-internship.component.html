@@ -41,12 +41,11 @@
               <mat-form-field class="text-field">
                 <mat-label >Enter the location</mat-label>
                 <label>
-                  <input matInput formControlName="ubic" required>
+                  <input matInput formControlName="location" required>
                 </label>
                 <mat-error *ngIf="location.invalid">{{getErrorMessageLocation()}}</mat-error>
               </mat-form-field>
             </div>
-
 
             <div class="grid-item">
               <p class="titles">Salary</p>
@@ -55,10 +54,11 @@
               <mat-form-field class="text-field">
                 <mat-label>Amount</mat-label>
                 <label>
-                  <input matInput type="number">
+                  <input matInput formControlName="salary" type="number">
                 </label>
                 <span matPrefix>$</span>
                 <span matSuffix>.00</span>
+
               </mat-form-field>
             </div>
           </div>
@@ -75,7 +75,6 @@
           <span class="material-icons">edit</span>
           Job Description
         </p>
-
         <form [formGroup]="secondFormGroup">
           <div class="grid-container">
             <div class="grid-item">
@@ -87,49 +86,56 @@
                 <label>
                   <textarea class="text-area"  matInput formControlName="description"></textarea>
                 </label>
+                <mat-error *ngIf="description.invalid">{{getErrorMessageDescription()}}</mat-error>
               </mat-form-field>
             </div>
           </div>
         </form>
-
         <div>
           <button mat-button matStepperPrevious class="btn_back">Back</button>
           <button mat-stroked-button matStepperNext class="btn_Next">Next</button>
         </div>
-
       </mat-card-content>
     </mat-step>
 
     <mat-step [stepControl]="thirdFormGroup">
-      <mat-card-content class="ib">
-        <p class="ti">
-          <span class="material-icons">
-            edit
-          </span>
+      <mat-card-content class="content">
+        <p class="title">
+          <span class="material-icons">edit</span>
           Profile Requirements
         </p>
-
         <form [formGroup]="thirdFormGroup">
-          <mat-grid-list cols="10" rowHeight="15vw">
-            <mat-grid-tile colspan="3">
-              <label class="titulos">Profile Requirements</label>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="7">
-              <mat-form-field>
-                <mat-label>Textarea</mat-label>
+          <div class="grid-container">
+            <div class="grid-item">
+              <p class="titles">Field of expertise</p>
+            </div>
+            <div class="grid-item">
+              <mat-form-field class="text-field">
+                <mat-label>Enter the preferred field of the intern</mat-label>
                 <label>
-                  <textarea  matInput formControlName="description"></textarea>
+                  <input matInput formControlName="field" required>
                 </label>
+                <mat-error *ngIf="field.invalid">{{getErrorMessageField()}}</mat-error>
               </mat-form-field>
-            </mat-grid-tile>
-          </mat-grid-list>
+            </div>
+            <div class="grid-item">
+              <p class="titles">Semester</p>
+            </div>
+            <div class="grid-item">
+              <mat-form-field class="text-field">
+                <mat-label>Enter the preferred semester of the intern</mat-label>
+                <label>
+                  <input matInput formControlName="semester" required>
+                </label>
+                <mat-error *ngIf="semester.invalid">{{getErrorMessageSemester()}}</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
         </form>
-
         <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button matStepperPrevious class="btn_back">Back</button>
+          <button (click)="createInternship()" mat-stroked-button matStepperNext class="btn_Next">Next</button>
         </div>
-
       </mat-card-content>
     </mat-step>
   </mat-vertical-stepper>
