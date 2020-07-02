@@ -8,6 +8,7 @@ import {EditprofilestudentComponent} from './editprofilestudent/editprofilestude
 import {BuscarpasantiaComponent} from './buscarpasantia/buscarpasantia.component';
 import {CreateInternshipComponent} from './create-internship/create-internship.component';
 import {DashboardCompanyComponent} from "./dashboard-company/dashboard-company.component";
+import {MyRequestsComponent} from './my-requests/my-requests.component';
 
 const routes: Routes = [
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'findInternship', component: BuscarpasantiaComponent},
   { path: 'createInternship', component: CreateInternshipComponent},
   { path: 'dashboardCompany', component: DashboardCompanyComponent}
+  {path: 'myRequests', component: MyRequestsComponent}
 
 ];
 

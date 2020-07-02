@@ -1,59 +1,4 @@
 
-.example-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.example-is-mobile .example-toolbar {
-  position: fixed;
-  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-  z-index: 2;
-}
-
-h1.example-app-name {
-  margin-left: 8px;
-}
-
-.example-sidenav-container {
-  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-  flex: 1;
-}
-
-.example-is-mobile .example-sidenav-container {
-  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
-     `<body>` to be our scrolling element for mobile layouts. */
-  flex: 1 0 auto;
-}
-
-.buscar{
-  font-size: 15px;
-}
-
-.person{
-  transform: translateX(660px);
-}
-
-.user{
-  transform: translateX(660px);
-}
-
-
-
-
-
-
-
-
-
-
-
-
 .example-card {
   max-width: 650px;
 }
@@ -63,7 +8,8 @@ h1.example-app-name {
 }
 
 .botonazul {
-  transform: translateX(300px);
+  margin-left: 30vw;
+  margin-top: 2vw;
   width: 42px; height: 20px;
   padding: 1px 10px;
   background-color: #2271b3; /* Color Rojo */
@@ -77,18 +23,12 @@ h1.example-app-name {
   background-size: cover;
 }
 
-
-
 .moveAvatar {
   position: relative;
   top: 1px; /* ajustar los valores para mover la imagen */
   left: 1000px;
 
 }
-
-
-
-
 
 .example-section {
 
@@ -102,14 +42,6 @@ h1.example-app-name {
   transform: translateX(300px);
   margin: 0 10px;
 }
-
-
-
-
-
-
-
-
 
 .custom-radio-checkbox {
   display: inline-flex;
@@ -152,4 +84,65 @@ h1.example-app-name {
 /* Cambia el radio personalizado cuando es pulsado */
 .custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--radio {
   background-image: url(https://i.ibb.co/wdh6sjB/Estrella-Checked.png);
+}
+
+.custom-radio-checkbox{
+  margin-top: 1vw;
+}
+
+
+@media only screen and (max-width: 1000px)
+{
+  .example-card{
+    width: 90vw !important;
+  }
+
+  .example-header-image{
+    width: 96.5vw;
+  }
+
+  .title{
+  }
+  .tr{
+    width: 50vw;
+  }
+  .custom-radio-checkbox__show--checkbox{
+    width: 100vw;
+    border-radius: 20px
+  }
+
+  .custom-radio-checkbox__show{
+    width: 10vw;
+  }
+
+  .custom-radio-checkbox__input{
+    margin-right: 10vw;
+  }
+
+  .custom-radio-checkbox__text{
+    width: 5vw;
+  }
+
+  .imagen1{
+    max-width: 10vw;
+  }
+
+  .text{
+  }
+  .botonazul{
+    margin-top: 5vw;
+  }
+
+  .custom-radio-checkbox{
+    margin-right: 10vw !important;
+  }
+
+  .subtitle{
+    width: 30vw;
+  }
+
+  .title2{
+    margin-top: 2vw;
+  }
+
 }
