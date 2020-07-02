@@ -7,13 +7,16 @@ import {LoginComponent} from './login/login.component';
 import {EditprofilestudentComponent} from './editprofilestudent/editprofilestudent.component';
 import {BuscarpasantiaComponent} from './buscarpasantia/buscarpasantia.component';
 import {CreateInternshipComponent} from './create-internship/create-internship.component';
+import {DashboardCompanyComponent} from "./dashboard-company/dashboard-company.component";
 
 const routes: Routes = [
+  { path: '',   redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},
   { path: 'dashboardStudent', component: DashboardStudentComponent},
   { path: 'editProfile', component: EditprofilestudentComponent},
   { path: 'findInternship', component: BuscarpasantiaComponent},
-  { path: 'createInternship', component: CreateInternshipComponent}
+  { path: 'createInternship', component: CreateInternshipComponent},
+  { path: 'dashboardCompany', component: DashboardCompanyComponent}
 
 ];
 

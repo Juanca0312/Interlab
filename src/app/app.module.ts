@@ -29,6 +29,9 @@ import { DashboardCompanyComponent } from './dashboard-company/dashboard-company
 import { CreateInternshipComponent } from './create-internship/create-internship.component';
 import { BuscarpasantiaComponent } from './buscarpasantia/buscarpasantia.component';
 import { MyRequestsComponent } from './my-requests/my-requests.component';
+import { MyInternshipsComponent } from './my-internships/my-internships.component';
+import {RouterModule} from "@angular/router";
+import { AppComponent } from './app/app.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,8 @@ import { MyRequestsComponent } from './my-requests/my-requests.component';
     BuscarpasantiaComponent,
     CreateInternshipComponent,
     MyRequestsComponent,
+    MyInternshipsComponent,
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +81,7 @@ import { MyRequestsComponent } from './my-requests/my-requests.component';
 
   ],
   providers: [],
-  bootstrap: [LoginComponent],
+  bootstrap: [AppComponent],
   exports: [
     FormsModule,
     ReactiveFormsModule
