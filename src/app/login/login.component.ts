@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   hide1 = true;
   username = '';
   password = '';
+  companyId = null;
   userId = null;
   auth = false;
   constructor(private router: Router) {
@@ -53,12 +54,19 @@ export class LoginComponent implements OnInit {
               console.log(response2.data.content[0].role);
               if (response2.data.content[0].role === 'student'){
                 alert('Welcome Student');
+                localStorage.setItem('userId', this.userId);
                 // router push student dashboard
               }
               else if (response2.data.content[0].role === 'company'){
-                alert('Welcome Company');
-                this.router.navigateByUrl('/dashboardCompany');
-                // push company dashboard
+                axios.get('https://interlab.azurewebsites.net/api/users/' + this.userId + '/companies')
+                  .then(response3 => {
+                    this.companyId = response3.data.content[0].id;
+                    console.log(this.companyId);
+                    alert('Welcome Company');
+                    localStorage.setItem('userId', this.userId);
+                    localStorage.setItem('companyId', this.companyId);
+                    this.router.navigateByUrl('/dashboardCompany');
+                  });
               }
               else{
                 alert('Role not found');

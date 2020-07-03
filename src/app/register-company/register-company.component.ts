@@ -13,6 +13,7 @@ export class RegisterCompanyComponent implements OnInit {
   username = '';
   firstName = '';
   lastName = '';
+  companyId = null;
   password = '';
   password2 = '';
 
