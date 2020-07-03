@@ -17,7 +17,7 @@
         </span>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="../editProfile">Editar perfil</button>
+        <button mat-menu-item (click)="mostrar('Edit_profile')">Editar perfil</button>
         <button mat-menu-item>Cerrar sesión</button>
       </mat-menu>
     </div>
@@ -29,12 +29,12 @@
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <img src="./assets/InterLab.png">
       <mat-nav-list class="lista">
-        <p><mat-list-item class="xd"><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item></p>
-        <p><mat-list-item class="xd" routerLink="/myRequests"><mat-icon>view_list</mat-icon>
+        <p><mat-list-item (click)="mostrar('Dashboard')"><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item></p>
+        <p><mat-list-item (click)="mostrar('MyRequests')"><mat-icon>view_list</mat-icon>
           My Requests
         </mat-list-item>
         </p>
-        <mat-list-item class="xd" routerLink="/findInternship">
+        <mat-list-item (click)="mostrar('FindInternship')">
           <mat-icon>
           search
         </mat-icon>
@@ -43,8 +43,11 @@
 
       </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content class="content">
-      <router-outlet></router-outlet>
+    <mat-sidenav-content>
+      <app-home-student *ngIf="showHome"></app-home-student>
+      <app-my-requests *ngIf="showMyRequests"></app-my-requests>
+      <app-find-internship *ngIf="showFindInternship"></app-find-internship>
+      <app-editprofilestudent *ngIf="showEditProfile"></app-editprofilestudent>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

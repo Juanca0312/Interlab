@@ -1,8 +1,8 @@
 import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
-import {NgForm} from "@angular/forms";
-import {MatTableDataSource} from "@angular/material/table";
-import {MatPaginator} from "@angular/material/paginator";
-import {MediaMatcher} from "@angular/cdk/layout";
+import {NgForm} from '@angular/forms';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-home-student',
@@ -15,6 +15,7 @@ export class HomeStudentComponent implements OnInit {
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
   fillerContent = Array.from({length: 50}, () =>
     `no repitas`);
+  // tslint:disable-next-line:variable-name
   private _mobileQueryListener: () => void;
 
   showFiller = false;
@@ -37,11 +38,4 @@ export class HomeStudentComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
   }
-
-  ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
-  }
-
 }
-
-//hola
