@@ -8,7 +8,7 @@ import {EditprofilestudentComponent} from '../editprofilestudent/editprofilestud
 import {MyRequestsComponent} from '../my-requests/my-requests.component';
 import {FindInternshipComponent} from '../find-internship/find-internship.component';
 import {HomeStudentComponent} from '../home-student/home-student.component';
-
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-dashboard-student',
   templateUrl: './dashboard-student.component.html',
@@ -32,7 +32,7 @@ export class DashboardStudentComponent implements OnInit {
   isEditMode = false;
 
   declarations: [FindInternshipComponent, EditprofilestudentComponent, MyRequestsComponent, HomeStudentComponent];
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -51,7 +51,7 @@ export class DashboardStudentComponent implements OnInit {
   private _mobileQueryListener: () => void;
 
   mostrar(activo) {
-    if(activo === 'Dashboard') {
+    if (activo === 'Dashboard') {
       this.showHome = true;
       this.showMyRequests = false;
       this.showEditProfile = false;
@@ -75,6 +75,10 @@ export class DashboardStudentComponent implements OnInit {
       this.showEditProfile = false;
       this.showFindInternship = true;
     }
+  }
+  Logout() {
+    console.log('salir');
+    this.router.navigateByUrl('/login');
   }
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
