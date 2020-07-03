@@ -17,11 +17,11 @@ export class MyRequestsComponent implements OnInit {
       }
     });
   }
-  displayedColumns: string[] = ['jobTitle', 'location', 'salary', 'created_at'];
+  displayedColumns: string[] = ['jobTitle', 'location', 'salary', 'state'];
   requests = [];
 
   getRequests() {
-    axios.get('https://interlab.azurewebsites.net/users/2/requests')
+    axios.get('https://interlab.azurewebsites.net/api/users/' + localStorage.getItem('userId') + '/internships')
       .then(response => {
         this.requests = response.data.content;
         console.log(response.data.content);
