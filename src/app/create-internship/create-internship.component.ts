@@ -86,6 +86,7 @@ export class CreateInternshipComponent implements OnInit{
       requiredDocuments: "",
     }).then(response => {
       console.log(response.data);
+      alert('Internship created successfully');
     });
   }
 }

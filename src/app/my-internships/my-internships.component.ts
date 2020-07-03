@@ -18,13 +18,13 @@ export class MyInternshipsComponent implements OnInit{
 
 
   getInternships() {
-    axios.get('https://interlab.azurewebsites.net/api/companies/1/internships')
+    axios.get('https://interlab.azurewebsites.net/api/companies/' + localStorage.getItem('companyId') +'/internships')
       .then(response => {
          this.Pasantias = response.data.content;
          console.log(response.data.content);
          console.log(response.data.content[0].jobTitle);
-        console.log(this.Pasantias);
-      })
+         console.log(this.Pasantias);
+      });
   }
 
   ngOnInit(): void {
