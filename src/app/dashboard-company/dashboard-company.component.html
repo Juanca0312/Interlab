@@ -18,8 +18,8 @@
         </span>
       </button>
       <mat-menu #menu="matMenu">
-        <button routerLink="/internships" mat-menu-item>Editar perfil</button>
-        <button mat-menu-item>Cerrar sesión</button>
+        <button routerLink="/internships" mat-menu-item>Edit Profile</button>
+        <button mat-menu-item (click)="Logout()">Logout</button>
       </mat-menu>
     </div>
   </mat-toolbar>

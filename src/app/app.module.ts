@@ -84,7 +84,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 
   ],
   providers: [],
-  bootstrap: [DashboardStudentComponent],
+  bootstrap: [AppComponent],
   exports: [
     FormsModule,
     ReactiveFormsModule
