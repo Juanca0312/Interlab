@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
               if (response2.data.content[0].role === 'student'){
                 alert('Welcome Student');
                 localStorage.setItem('userId', this.userId);
-                // router push student dashboard
+                this.router.navigateByUrl('/dashboardStudent');
               }
               else if (response2.data.content[0].role === 'company'){
                 axios.get('https://interlab.azurewebsites.net/api/users/' + this.userId + '/companies')
