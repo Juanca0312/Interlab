@@ -1,6 +1,4 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatTableDataSource} from '@angular/material/table';
-import {MatPaginator} from '@angular/material/paginator';
 import axios from 'axios';
 import { AxiosInstance } from 'axios';
 
@@ -19,24 +17,23 @@ export class MyRequestsComponent implements OnInit {
       }
     });
   }
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  displayedColumns: string[] = ['jobTitle', 'location', 'salary', 'created_at'];
+  requests = [];
 
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  getRequests() {
+    axios.get('https://interlab.azurewebsites.net/users/2/requests')
+      .then(response => {
+        this.requests = response.data.content;
+        console.log(response.data.content);
+        console.log(response.data.content[0].jobTitle);
+        console.log(this.requests);
+      });
+  }
 
   ngOnInit(): void{
-    this.dataSource.paginator = this.paginator;
+    console.log('hola');
+    this.getRequests();
   }
 
 }
 
-export interface UserData {
-  location: string;
-  jobTitle: string;
-  salary: number;
-  created_at: string;
-}
-
-const ELEMENT_DATA: UserData[] = [
-  {jobTitle: 'Research intern', location: 'Redmond, Washington, USA', salary: 2000, created_at: '9/1/2020 0:00'},
-];
