@@ -52,7 +52,7 @@ export class DashboardCompanyComponent implements OnDestroy {
 
   Logout() {
     console.log('salir');
-    this.router.navigateByUrl('login');
+    this.router.navigateByUrl('/login');
   }
 
   ngOnDestroy(): void {
