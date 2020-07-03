@@ -1,15 +1,17 @@
 <h1 style="padding-left: 45px;padding-top: 45px" >Estas son algunas de las empresas en busca de talentos como tú:</h1>
-      <table class="egt">
-        <tr>
-          <td style="padding: 30px;">
-            <mat-card class="example-card">
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-dialog-content>
+            <mat-grid-tile  *ngFor="let companiesForStudent of companiesForStudent">
+            <mat-card class="example-card" >
 
               <div mat-card-image class="example-header-image">
+                <br>
+
                 <mat-card-header class= "imagen1">
 
-                  <mat-card-title>Disruplab</mat-card-title>
+                  <mat-card-title >{{companiesForStudent.name}}</mat-card-title>
                   <mat-card-subtitle><mat-icon class="position-icon"> location_on </mat-icon>
-                    Lima, Lima </mat-card-subtitle>
+                    {{companiesForStudent.city}} - {{companiesForStudent.country}} - {{companiesForStudent.address}}</mat-card-subtitle>
 
                 </mat-card-header>
 
@@ -17,252 +19,31 @@
 
               <mat-card-content>
 
-                <p>
-                  Sector: Tecnologia y Desarrollo
-                </p>
-                <p>
-                  Una empresa nueva en el mercado, fundada por Ingenieros de la UNI. Es una Consultora de Transformación
-                  Digital que trabaja el desarrollo de software bajo un enfoque de innovación y experiencia de usuario
-                  (UX), sus fundadores son conocidos por llevar estudios en Israel y en diferentes partes del mundo.
-                  Son jóvenes, pero con un talento impresionante.
-                </p>
+
+                  Sector : {{companiesForStudent.sector}}
+
+                <p></p>
+                <h3>
+                  {{companiesForStudent.description}}
+                </h3>
+
+                  Contactos
+
+                <h5>
+                  Email: {{companiesForStudent.email}}
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Telefono: {{companiesForStudent.phone}}
+                </h5>
               </mat-card-content>
               <mat-card-actions>
               </mat-card-actions>
             </mat-card>
-          </td>
 
+            </mat-grid-tile>
 
 
-
-
-          <td style="padding: 30px;">
-            <mat-card class="example-card">
-
-              <div mat-card-image class="example-header-image">
-                <div>  .</div>
-                <mat-card-header class= "imagen1">
-
-                  <mat-card-title>INDRA</mat-card-title>
-                  <mat-card-subtitle><mat-icon class="position-icon"> location_on </mat-icon>
-                    Lima, Lima </mat-card-subtitle>
-
-                </mat-card-header>
-
-              </div>
-
-              <mat-card-content>
-
-                <p>
-                  Sector: Tecnologia y Desarrollo
-                </p>
-                <p>
-                  Trae tu talento a una compañía global de consultoría y tecnología, con presencia en los 5 continentes
-                  y más de 40.000 profesionales. Trabajarás en un entorno de soluciones y servicios innovadores para
-                  nuestros clientes en los principales sectores de actividad, aportándoles valor añadido. Participarás
-                  de la transformación de los negocios trabajando con profesionales de referencia.
-                </p>
-              </mat-card-content>
-              <mat-card-actions>
-              </mat-card-actions>
-            </mat-card>
-          </td>
-
-        </tr>
-
-
-
-
-        <tr>
-
-          <td style="padding: 30px;">
-            <mat-card class="example-card">
-
-              <div mat-card-image class="example-header-image">
-                <div>  .</div>
-                <mat-card-header class= "imagen1">
-
-                  <mat-card-title>SUPERINTENDENTE SAC</mat-card-title>
-                  <mat-card-subtitle><mat-icon class="position-icon"> location_on </mat-icon>
-                    Lima, Lima </mat-card-subtitle>
-
-                </mat-card-header>
-
-              </div>
-
-              <mat-card-content>
-
-                <p>
-                  Sector: Tecnologia y Desarrollo
-                </p>
-                <p>
-                  Somos una empresa lideres en el rugro de desarrollo de paginas web, dentro del top 10 de mejores
-                  empresas de desarrollo en el Perú.
-                </p>
-              </mat-card-content>
-              <mat-card-actions>
-              </mat-card-actions>
-            </mat-card>
-          </td>
-
-          <td style="padding: 30px;">
-            <mat-card class="example-card">
-
-              <div mat-card-image class="example-header-image">
-                <div>  .</div>
-                <mat-card-header class= "imagen1">
-
-                  <mat-card-title>TELFILL</mat-card-title>
-                  <mat-card-subtitle><mat-icon class="position-icon"> location_on </mat-icon>
-                    Lima, Lima </mat-card-subtitle>
-
-                </mat-card-header>
-
-              </div>
-
-              <mat-card-content>
-
-                <p>
-                  Sector: Tecnologia y Desarrollo
-                </p>
-                <p>
-                  Somos una empresa diseñadora de redes y comunicación.
-                </p>
-              </mat-card-content>
-              <mat-card-actions>
-              </mat-card-actions>
-            </mat-card>
-          </td>
-
-
-        </tr>
-
-        <tr>
-
-          <td style="padding: 30px;">
-            <mat-card class="example-card">
-
-              <div mat-card-image class="example-header-image">
-                <div>  .</div>
-                <mat-card-header class= "imagen1">
-
-                  <mat-card-title>MIRILLA SAC</mat-card-title>
-                  <mat-card-subtitle><mat-icon class="position-icon"> location_on </mat-icon>
-                    Lima, Surco </mat-card-subtitle>
-
-                </mat-card-header>
-
-              </div>
-
-              <mat-card-content>
-
-                <p>
-                  Sector: Tecnologia y Desarrollo
-                </p>
-                <p>
-                  Somos una de las empresas más prestigiosas a nivel nacional en diseño de sistemas de información.
-                </p>
-              </mat-card-content>
-              <mat-card-actions>
-              </mat-card-actions>
-            </mat-card>
-          </td>
-
-          <td style="padding: 30px;">
-            <mat-card class="example-card">
-
-              <div mat-card-image class="example-header-image">
-                <div>  .</div>
-                <mat-card-header class= "imagen1">
-
-                  <mat-card-title>LYRICS SAC</mat-card-title>
-                  <mat-card-subtitle><mat-icon class="position-icon"> location_on </mat-icon>
-                    Lima, Lima </mat-card-subtitle>
-
-                </mat-card-header>
-
-              </div>
-
-              <mat-card-content>
-
-                <p>
-                  Sector: Tecnologia y Desarrollo
-                </p>
-                <p>
-                  En LYRICS Ingeniería de Proyectos nos encontramos en la búsqueda de nuevos talentos.
-                </p>
-              </mat-card-content>
-              <mat-card-actions>
-              </mat-card-actions>
-            </mat-card>
-          </td>
-
-
-        </tr>
-
-        <tr>
-
-          <td style="padding: 30px;">
-            <mat-card class="example-card">
-
-              <div mat-card-image class="example-header-image">
-                <div>  .</div>
-                <mat-card-header class= "imagen1">
-
-                  <mat-card-title>HUGO SA</mat-card-title>
-                  <mat-card-subtitle><mat-icon class="position-icon"> location_on </mat-icon>
-                    Trujillo, La libertad </mat-card-subtitle>
-
-                </mat-card-header>
-
-              </div>
-
-              <mat-card-content>
-
-                <p>
-                  Sector: Tecnologia y Desarrollo
-                </p>
-                <p>
-                  Empresa encarga de ofrecer servicios social media a empresas de todo tipo de rugro.
-                </p>
-              </mat-card-content>
-              <mat-card-actions>
-              </mat-card-actions>
-            </mat-card>
-          </td>
-
-          <td style="padding: 30px;">
-            <mat-card class="example-card">
-
-              <div mat-card-image class="example-header-image">
-                <div>  .</div>
-                <mat-card-header class= "imagen1">
-
-                  <mat-card-title>SINCERO SAC</mat-card-title>
-                  <mat-card-subtitle><mat-icon class="position-icon"> location_on </mat-icon>
-                    Lima, Lima </mat-card-subtitle>
-
-                </mat-card-header>
-
-              </div>
-
-              <mat-card-content>
-
-                <p>
-                  Sector: Tecnologia y Desarrollo
-                </p>
-                <p>
-                  Empresa lider en gestion y analisis de sistemas, lideres a nivel nacional.
-                </p>
-              </mat-card-content>
-            </mat-card>
-          </td>
-
-
-        </tr>
-
-      </table>
-
+  </mat-dialog-content>
+</mat-grid-list>
 
 
 
