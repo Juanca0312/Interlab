@@ -3,6 +3,9 @@ import {NgForm} from '@angular/forms';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MediaMatcher} from '@angular/cdk/layout';
+import axios from 'axios';
+import {AxiosInstance} from 'axios';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home-student',
@@ -22,7 +25,9 @@ export class HomeStudentComponent implements OnInit {
   @ViewChild('dashboard-student', {static: false} )
   homeStudentForm: NgForm;
   dataSource = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'state', 'description', 'publicationDate', 'startingDate', 'finishingDate', 'salary'];
+  // displayedColumns: string[] = ['id', 'state', 'description', 'publicationDate', 'startingDate', 'finishingDate', 'salary'];
+
+  companiesForStudent = [];
 
   @ViewChild(MatPaginator, {static: true})
   paginator: MatPaginator;
@@ -35,7 +40,19 @@ export class HomeStudentComponent implements OnInit {
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
+  getCompaniesForStudent() {
+    axios.get('https://interlab.azurewebsites.net/api/companies')
+      .then(response => {
+        this.companiesForStudent = response.data.content;
+        console.log(response.data.content);
+        console.log(response.data.content[0].jobDescription);
+        console.log(this.companiesForStudent);
+        console.log(response.data.content[0].email);
+      });
+  }
+
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
+    this.getCompaniesForStudent();
   }
 }
