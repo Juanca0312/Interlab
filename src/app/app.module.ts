@@ -27,11 +27,12 @@ import { EditprofilestudentComponent } from './editprofilestudent/editprofilestu
 import { DashboardStudentComponent } from './dashboard-student/dashboard-student.component';
 import { DashboardCompanyComponent } from './dashboard-company/dashboard-company.component';
 import { CreateInternshipComponent } from './create-internship/create-internship.component';
-import { BuscarpasantiaComponent } from './buscarpasantia/buscarpasantia.component';
 import { MyRequestsComponent } from './my-requests/my-requests.component';
 import { MyInternshipsComponent } from './my-internships/my-internships.component';
-import {RouterModule} from "@angular/router";
+import { HomeStudentComponent} from './home-student/home-student.component';
 import { AppComponent } from './app/app.component';
+import { FindInternshipComponent} from './find-internship/find-internship.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -41,11 +42,12 @@ import { AppComponent } from './app/app.component';
     DashboardStudentComponent,
     DashboardCompanyComponent,
     EditprofilestudentComponent,
-    BuscarpasantiaComponent,
     CreateInternshipComponent,
     MyRequestsComponent,
     MyInternshipsComponent,
     AppComponent,
+    HomeStudentComponent,
+    FindInternshipComponent
   ],
   imports: [
     BrowserModule,
@@ -77,11 +79,12 @@ import { AppComponent } from './app/app.component';
     AppRoutingModule,
     MatTableModule,
     MatPaginatorModule,
-    MatStepperModule
+    MatStepperModule,
+    MatDialogModule
 
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [DashboardStudentComponent],
   exports: [
     FormsModule,
     ReactiveFormsModule
