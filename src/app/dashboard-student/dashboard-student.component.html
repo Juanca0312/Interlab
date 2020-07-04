@@ -1,0 +1,56 @@
+<div class="example-container">
+  <mat-toolbar color="primary" class="encabezado"
+               [style.marginTop.px]="mobileQuery.matches ? 0 : 5">
+    <button mat-icon-button  (click)="snav.toggle()">
+      <span class="material-icons">menu</span>
+    </button>
+    <div class="person">
+      <span class="material-icons">
+        account_circle
+      </span>
+    </div>&nbsp;
+    <div class="user">
+      <mat-label align="right">{{localStorage}}</mat-label>
+      <button class="menu" mat-button [matMenuTriggerFor]="menu">
+        <span class="material-icons">
+          keyboard_arrow_down
+        </span>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="mostrar('Edit_profile')">Editar perfil</button>
+        <button mat-menu-item (click)="Logout()">Cerrar sesión</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <img src="./assets/InterLab.png">
+      <mat-nav-list class="lista">
+        <p><mat-list-item (click)="mostrar('Dashboard')"><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item></p>
+        <p><mat-list-item (click)="mostrar('MyRequests')"><mat-icon>view_list</mat-icon>
+          My Requests
+        </mat-list-item>
+        </p>
+        <mat-list-item (click)="mostrar('FindInternship')">
+          <mat-icon>
+          search
+        </mat-icon>
+          Find Internships
+        </mat-list-item>
+
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-home-student *ngIf="showHome"></app-home-student>
+      <app-my-requests *ngIf="showMyRequests"></app-my-requests>
+      <app-find-internship *ngIf="showFindInternship"></app-find-internship>
+      <app-editprofilestudent *ngIf="showEditProfile"></app-editprofilestudent>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+
+
