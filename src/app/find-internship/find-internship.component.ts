@@ -1,8 +1,8 @@
 import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
-import {NgForm} from "@angular/forms";
-import {MatTableDataSource} from "@angular/material/table";
-import {MatPaginator} from "@angular/material/paginator";
-import {MediaMatcher} from "@angular/cdk/layout";
+import {NgForm} from '@angular/forms';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MediaMatcher} from '@angular/cdk/layout';
 import axios from 'axios';
 import {AxiosInstance} from 'axios';
 import {Router} from '@angular/router';
@@ -14,7 +14,7 @@ import {Router} from '@angular/router';
 })
 export class FindInternshipComponent implements OnInit {
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router) {
+  constructor( changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router: Router) {
 
     this.axiosClient = axios.create({
       timeout: 3000,
@@ -49,6 +49,7 @@ export class FindInternshipComponent implements OnInit {
 
 
 
+
   getInternship() {
     axios.get('https://interlab.azurewebsites.net/api/internships')
       .then(response => {
@@ -64,4 +65,16 @@ export class FindInternshipComponent implements OnInit {
     this.getInternship();
   }
 
+  //localStorage.setItem("internshipID",)
+  Llamada(id){
+   localStorage.setItem('internshipId', id);
+   axios.post('https://interlab.azurewebsites.net/api/users/' + localStorage.getItem('userId') + '/internships/' +
+      localStorage.getItem('internshipId'))
+    .then(response => {
+      console.log('Aplicado' , response.data);
+      axios.get('https://interlab.azurewebsites.net/api/users/' + localStorage.getItem('userId') + '/internships/').then(response2 => {
+        localStorage.setItem('internshipId', id);
+      });
+    });
+  }
 }
