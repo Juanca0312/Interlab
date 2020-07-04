@@ -1,0 +1,35 @@
+<h1 class="df">Estas son algunas de las empresas en busca de talentos como tú:</h1>
+<mat-grid-list class="qw" cols="2" rowHeight="2:1">
+  <mat-dialog-content class="card">
+            <mat-grid-tile  *ngFor="let companiesForStudent of companiesForStudent">
+            <mat-card class="example-card" >
+
+              <div mat-card-image class="example-header-image">
+                <br>
+                <mat-card-header class= "xd">
+
+                  <mat-card-title class="NameCompany">{{companiesForStudent.name}}</mat-card-title>
+                  <mat-card-subtitle class="text3"><mat-icon class="position-icon"> location_on </mat-icon>
+                    {{companiesForStudent.city}} - {{companiesForStudent.country}} - {{companiesForStudent.address}}</mat-card-subtitle>
+                </mat-card-header>
+              </div>
+              <mat-card-content class="re">
+                  Sector : {{companiesForStudent.sector}}
+                <p></p>
+                <h3 class="text1">
+                  {{companiesForStudent.description}}
+                </h3>
+                  Contactos
+                <h5 class="text2">
+                  Email: {{companiesForStudent.email}}&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Telefono: {{companiesForStudent.phone}}
+                </h5>
+              </mat-card-content>
+              <mat-card-actions>
+              </mat-card-actions>
+            </mat-card>
+            </mat-grid-tile>
+  </mat-dialog-content>
+</mat-grid-list>
+
+

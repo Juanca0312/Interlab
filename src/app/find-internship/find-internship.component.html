@@ -1,0 +1,40 @@
+
+<h1 class="title"style="padding-left: 45px;padding-top: 45px">Resultados de Busqueda</h1>
+<mat-grid-list class="sa" cols="2" rowHeight="2:1">
+  <mat-dialog-content>
+<mat-grid-tile *ngFor="let interships of interships">
+
+<mat-card  class="example-card" >
+
+  <div mat-card-image class="example-header-image">
+    <br>
+    <mat-card-header class= "imagen1">
+
+      <mat-card-title class="title2">{{interships.jobTitle}}</mat-card-title>
+      <mat-card-subtitle class="subtitle">{{interships.location}}</mat-card-subtitle>
+      <button (click)= " Llamada( interships.id ) " class="botonazul"> Postular</button>
+      <label class="custom-radio-checkbox">
+        <!-- Input oculto -->
+        <input class="custom-radio-checkbox__input" type="checkbox" name="genero" value="hombre">
+        <!-- Imagen en sustitucion -->
+        <span class="custom-radio-checkbox__show custom-radio-checkbox__show--checkbox"></span>
+        <!-- Texto -->
+      </label>
+    </mat-card-header>
+
+  </div>
+
+  <mat-card-content>
+
+    <p >
+      Salario: S/. {{interships.salary}} al mes
+    </p>
+    <!--<h6 style="text-align:left;">S/. 34 por hora, S/. 72,000 anual</h6>-->
+    <p >{{interships.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+</mat-grid-tile>
+  </mat-dialog-content>
+</mat-grid-list>
+
