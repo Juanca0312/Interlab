@@ -40,13 +40,14 @@ export class DashboardStudentComponent implements OnInit {
     this.showMyRequests = false;
     this.showEditProfile = false;
     this.showFindInternship = false;
+    this.localStorage = localStorage.getItem('firstName');
   }
   mobileQuery: MediaQueryList;
   showHome: boolean;
   showMyRequests: boolean;
   showEditProfile: boolean;
   showFindInternship: boolean;
-
+  localStorage: string;
   // tslint:disable-next-line:variable-name
   private _mobileQueryListener: () => void;
 

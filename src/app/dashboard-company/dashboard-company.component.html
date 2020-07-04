@@ -11,7 +11,7 @@
       </span>
     </div>&nbsp;
     <div class="user">
-      <mat-label align="right">John Doe</mat-label>
+      <mat-label align="right">{{localStorage}}</mat-label>
       <button class="menu" mat-button [matMenuTriggerFor]="menu">
         <span class="material-icons">
           keyboard_arrow_down
@@ -29,12 +29,24 @@
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <mat-nav-list class="lista">
         <p><mat-list-item (click)="mostrar('Dashboard')"><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item></p>
-        <p><mat-list-item (click)="mostrar('Internship')"><mat-icon>circle</mat-icon>Pasantias</mat-list-item></p>
-        <p><mat-list-item (click)="mostrar('CreateInternship')"><mat-icon>circle</mat-icon>Crear Pasantia</mat-list-item></p>
+        <p><mat-list-item (click)="mostrar('Internship')">
+          <span class="material-icons">
+            folder
+          </span>
+          Pasantias
+        </mat-list-item>
+        </p>
+        <p><mat-list-item (click)="mostrar('CreateInternship')"><span class="material-icons">
+          add
+        </span>
+          Crear Pasantia
+        </mat-list-item>
+        </p>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content >
+      <app-home-student *ngIf="showHome"></app-home-student>
       <app-create-internship *ngIf="showCreateInternship"></app-create-internship>
       <app-my-internships *ngIf="showInternship"></app-my-internships>
     </mat-sidenav-content>

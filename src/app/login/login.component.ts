@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   private axiosClient: AxiosInstance;
   hide1 = true;
   username = '';
+  name = '';
   password = '';
   companyId = null;
   userId = null;
@@ -54,12 +55,16 @@ export class LoginComponent implements OnInit {
               console.log(response2.data.content[0].role);
               if (response2.data.content[0].role === 'student'){
                 alert('Welcome Student');
+                this.name = response2.data.content[0].firstName;
+                localStorage.setItem('firstName', this.name);
                 localStorage.setItem('userId', this.userId);
                 this.router.navigateByUrl('/dashboardStudent');
               }
               else if (response2.data.content[0].role === 'company'){
                 axios.get('https://interlab.azurewebsites.net/api/users/' + this.userId + '/companies')
                   .then(response3 => {
+                    this.name = response2.data.content[0].firstName;
+                    localStorage.setItem('firstName', this.name);
                     this.companyId = response3.data.content[0].id;
                     console.log(this.companyId);
                     alert('Welcome Company');
