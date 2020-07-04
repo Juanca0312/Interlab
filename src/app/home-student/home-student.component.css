@@ -1,126 +1,51 @@
 
-
 h1.example-app-name {
-  margin-left: 8px;
+  margin-left: 8vw;
 }
 
 .pading{
-  padding-left: 50px;
+  padding-left: 30vw;
 }
 
 .position-icon{
-  transform: translateY(5px);
-  padding-right: 20px;
+  padding-right: 1vw;
 }
 
-
-
-
-
-
-
-
-
-.example-card {
-  max-width: 650px;
-  border-radius: 20px 20px 1px 1px;
+.example-card{
+  width: 36.5vw;
 }
 
-.smaltype{
-  font-size: 10%;
+.xd {
+max-width: 35vw;
+  max-height: 35vw;
 }
 
-.botonazul {
-  transform: translateX(300px);
-  width: 42px; height: 20px;
-  padding: 1px 10px;
-  background-color: #2271b3; /* Color Rojo */
-  color: white!important;
-  font-size: 80%;
-  border-radius: 10px;
-}
 .example-header-image {
-  width: 683px; height: 80px;
+  width: 39vw; height: 8vw;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9sGTfquMDW2uvTdMmH9YlbkREVR7yvaGGMg&usqp=CAU');
-  border-radius: 1px 1px 20px 20px;
   background-size: cover;
+  border-radius: 2vw 2vw 2vw 2vw;
+}
+
+.df{
+  padding-left: 5vw;
+  padding-top: 5vw;
 }
 
 
+@media only screen and (max-width: 1000px){
+  .qw{
+    width: 225vw;
+  }
 
-.moveAvatar {
-  position: relative;
-  top: 1px; /* ajustar los valores para mover la imagen */
-  left: 1000px;
+  .example-header-image{
+    width: 55vw; height: 20vw;
+  }
 
-}
-
-
-
-
-
-.example-section {
-
-  display: flex;
-  align-content: center;
-  align-items: center;
-  height: 60px;
-}
-
-.example-margin {
-  transform: translateX(300px);
-  margin: 0 10px;
-}
-
-
-
-
-
-
-
-
-
-.custom-radio-checkbox {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-family: arial;
-}
-
-/* Modificador para dar la imagen de checkbox */
-.custom-radio-checkbox__show--checkbox {
-  background-image: url(https://i.ibb.co/L9ghYN3/Estrella-UNChecked.png);
-}
-
-/* Modificador para dar la imagen de radio */
-.custom-radio-checkbox__show--radio {
-  background-image: url(https://i.ibb.co/L9ghYN3/Estrella-UNChecked.png);
-}
-
-/* Oculta input original */
-.custom-radio-checkbox > .custom-radio-checkbox__input {
-  display: none;
-}
-
-/* Radio personalizado usando <span> */
-.custom-radio-checkbox > .custom-radio-checkbox__show {
-
-  display: inline-block;
-  transform: translateY(-11px);
-  width: 40px;
-  height: 40px;
-  margin-right: .5rem;
-  background-size: cover;
-}
-
-/* Cambia el checkbox personalizado cuando es pulsado */
-.custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--checkbox {
-  background-image: url(https://i.ibb.co/wdh6sjB/Estrella-Checked.png);
-}
-
-/* Cambia el radio personalizado cuando es pulsado */
-.custom-radio-checkbox > .custom-radio-checkbox__input:checked + .custom-radio-checkbox__show--radio {
-  background-image: url(https://i.ibb.co/wdh6sjB/Estrella-Checked.png);
+  .example-card{
+    width: 48vw;
+    padding-left: -20vw;
+  }
 }
 
 
