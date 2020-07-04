@@ -20,17 +20,19 @@ export class DashboardCompanyComponent implements OnDestroy {
     this.showHome = true;
     this.showInternship = false;
     this.showCreateInternship = false;
+    this.localStorage = localStorage.getItem('firstName');
   }
   mobileQuery: MediaQueryList;
   showHome: boolean;
   showInternship: boolean;
   showCreateInternship: boolean;
+  localStorage: string;
 
   // tslint:disable-next-line:variable-name
   private _mobileQueryListener: () => void;
 
   mostrar(activo) {
-    if (activo === 'Home') {
+    if (activo === 'Dashboard') {
       console.log(localStorage.getItem('userId'));
       this.showHome = true;
       this.showInternship = false;

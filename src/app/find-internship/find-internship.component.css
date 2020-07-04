@@ -24,12 +24,6 @@
   border-radius: 20px 20px 20px 20px;
 }
 
-.moveAvatar {
-  position: relative;
-  top: 1px; /* ajustar los valores para mover la imagen */
-  left: 1000px;
-
-}
 
 .example-section {
 
@@ -92,14 +86,18 @@
 }
 
 
-@media only screen and (max-width: 1000px)
-{
+@media only screen and (max-width: 1000px){
+
+  .sa{
+    width: 100vw;
+  }
+
   .example-card{
-    width: 90vw !important;
+    width: 40vw !important;
   }
 
   .example-header-image{
-    width: 96.5vw;
+    width: 46.5vw !important;
   }
 
   .title{
@@ -131,7 +129,8 @@
   .text{
   }
   .botonazul{
-    margin-top: 5vw;
+    margin-top: 3vw;
+    transform: translateX(-19vw);
   }
 
   .custom-radio-checkbox{
