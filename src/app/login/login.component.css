@@ -1,12 +1,16 @@
-
+.login {
+  height: 100%;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 41.65% 58.35%;
   background-color: white;
-  font-family: 'Khula', sans-serif !important;
 }
 .grid-item {
-  padding: 2vw;
+  box-sizing: border-box;
+  padding: 1vw;
+  width: 100%;
+  height: 100%;
 }
 .right_banner{
   color: white;
@@ -14,22 +18,24 @@
 }
 .right-form{
   width: 100%;
-  font-family: 'Khula', sans-serif !important;
   margin-top: 10vw;
 }
 .welcome_title{
   font-size: 4vw;
   margin-left: 5vw;
   margin-bottom: 7vw;
+  font-weight: 300;
 }
 .interlab_title{
   font-size: 7vw;
   margin-left: 5vw;
   margin-bottom: 10vw;
+  font-weight: 600;
 }
 .login_title{
   font-size: 3vw;
   margin-left: 5vw;
+  font-weight: 300;
 }
 .logo{
   width: 15%;

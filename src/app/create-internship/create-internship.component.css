@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 30% 60%;
   background-color: white;
-  font-family: 'Khula', sans-serif !important;
 }
 .grid-item {
   padding: 1.8vw 2vw 1vw 2vw;
