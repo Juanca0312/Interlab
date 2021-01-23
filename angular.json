@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "memberships": {
+    "interlab": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/memberships",
+            "outputPath": "dist/interlab",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "memberships:build"
+            "browserTarget": "interlab:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "memberships:build:production"
+              "browserTarget": "interlab:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "memberships:build"
+            "browserTarget": "interlab:build"
           }
         },
         "test": {
@@ -112,18 +112,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "memberships:serve"
+            "devServerTarget": "interlab:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "memberships:serve:production"
+              "devServerTarget": "interlab:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "memberships",
+  "defaultProject": "interlab",
   "cli": {
     "analytics": "d4821e78-c424-4578-8e6a-5cd0954aa9ed"
   }

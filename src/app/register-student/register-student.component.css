@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: 41.65% 58.35%;
   background-color: white;
-  font-family: 'Khula', sans-serif !important;
 }
 .grid-item {
   padding: 2vw;
@@ -14,7 +13,6 @@
 }
 .right-form{
   width: 100%;
-  font-family: 'Khula', sans-serif !important;
   margin-top: 10vw;
 }
 .welcome_title{
