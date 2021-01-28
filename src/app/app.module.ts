@@ -20,7 +20,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatStepperModule} from '@angular/material/stepper';
 
-import { LoginComponent } from './login/login.component';
+import { Login } from './login/login.component';
 import { RegisterStudentComponent } from './register-student/register-student.component';
 import { RegisterCompanyComponent } from './register-company/register-company.component';
 import { EditprofilestudentComponent } from './editprofilestudent/editprofilestudent.component';
@@ -30,13 +30,13 @@ import { CreateInternshipComponent } from './create-internship/create-internship
 import { MyRequestsComponent } from './my-requests/my-requests.component';
 import { MyInternshipsComponent } from './my-internships/my-internships.component';
 import { HomeStudentComponent} from './home-student/home-student.component';
-import { AppComponent } from './app/app.component';
+import { Main } from './main.component';
 import { FindInternshipComponent} from './find-internship/find-internship.component';
 import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
-    LoginComponent,
+    Login,
     RegisterStudentComponent,
     RegisterCompanyComponent,
     DashboardStudentComponent,
@@ -45,7 +45,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     CreateInternshipComponent,
     MyRequestsComponent,
     MyInternshipsComponent,
-    AppComponent,
+    Main,
     HomeStudentComponent,
     FindInternshipComponent
   ],
@@ -84,7 +84,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [Main],
   exports: [
     FormsModule,
     ReactiveFormsModule
