@@ -3,12 +3,12 @@ import {NgForm} from '@angular/forms';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, OnDestroy} from '@angular/core';
+import {ChangeDetectorRef} from '@angular/core';
 import {EditprofilestudentComponent} from '../editprofilestudent/editprofilestudent.component';
 import {MyRequestsComponent} from '../my-requests/my-requests.component';
 import {FindInternshipComponent} from '../find-internship/find-internship.component';
 import {HomeStudentComponent} from '../home-student/home-student.component';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-dashboard-student',
   templateUrl: './dashboard-student.component.html',
@@ -77,8 +77,7 @@ export class DashboardStudentComponent implements OnInit {
       this.showFindInternship = true;
     }
   }
-  Logout() {
-    console.log('salir');
+  logout() {
     this.router.navigateByUrl('/login');
   }
   ngOnInit(): void {
