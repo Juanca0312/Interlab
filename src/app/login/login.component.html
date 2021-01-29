@@ -1,51 +1,65 @@
-<div class="grid-container login">
-  <div class="grid-item">
-      <div>
-        <img class="logo" src="assets/interlab_logo.png" alt="">
-      </div>
-      <mat-form-field class="text-field1" floatLabel="always">
-        <mat-label>E-mail</mat-label>
-        <label>
-          <input (keyup)="getUsername($event)" matInput placeholder="student@gmail.com">
-        </label>
-      </mat-form-field>
-
-      <mat-form-field class="text-field2"  floatLabel="always">
-        <mat-label>Password</mat-label>
-        <label>
-          <input (keyup)="getPassword($event)" matInput [type]="hide1 ? 'password' : 'text'">
-        </label>
-        <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide1">
-          <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-      </mat-form-field>
-      <div class="grid-container">
-        <div class="grid-item registerStudent">
-          <a routerLink="/dashboard-student">Register as a Student</a>
+<div class="login-container">
+  <div class="left-column">
+    <div class="logo-row">
+      <img class="logo" src="assets/interlab_logo.png" alt="interlab">
+    </div>
+    <div class="message-row">
+      <h1 class="message-title">Get access to the best internships in the world!</h1>
+    </div>
+    <div class="form-row">
+      <form [formGroup]="loginForm">
+        <div class="mail-row">
+          <mat-form-field class="mail-field" floatLabel="always">
+            <mat-label>E-mail</mat-label>
+            <label>
+              <input formControlName="username" (keyup)="getUsername($event)" matInput placeholder="student@gmail.com">
+            </label>
+          </mat-form-field>
         </div>
-        <div class="grid-item registerCompany">
-          <a routerLink="/dashboard-student">Register as a Company</a>
+        <div class="password-row">
+          <mat-form-field class="password-field" floatLabel="always">
+            <mat-label>Password</mat-label>
+            <label>
+              <input formControlName="password" (keyup)="getPassword($event)" matInput [type]="hide1 ? 'password' : 'text'">
+            </label>
+            <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide1">
+              <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      </form>
+      <div class="links-row">
+        <div class="left-link-col">
+          <a routerLink="/dashboardStudent">Register as a Student</a>
+        </div>
+        <div class="right-link-col">
+          <a routerLink="/dashboardStudent">Register as a Company</a>
         </div>
       </div>
-      <button (click)="getUsers()" class="btn_register" mat-raised-button>Log In</button>
-      <div class="about">
-        <p class="about_title">What Is InterLab?</p>
-        <p class="about_text">Here at InterLab, we love Internships! Make sure to create an account to get access to the best internships offers from all around the globe.</p>
+      <div class="button-row">
+        <button (click)="login()" class="login-btn" mat-raised-button>Log In</button>
+      </div>    
+    </div>
+    <div class="info-row">
+      <div class="left-info-col">
+        <p class="info-title">What Is InterLab?</p>
+        <p class="info-text">Here at InterLab, we love Internships! Make sure to create an account to get access to the best internships offers from all around the globe.</p>
+      </div>
+      <div class="right-info-col">
         <a href="https://8rb.github.io/Interlab-Landing-Page/" target="_blank">
-        <button class="btn_about" mat-raised-button>About Us</button>
+          <button class="about-btn" mat-raised-button>About Us</button>
         </a>
       </div>
-  </div>
-  <div class="grid-item right_banner">
-    <div class="right-form">
-        <p class="welcome_title">Welcome to</p>
-        <h1 class="interlab_title">Interlab</h1>
-        <p class="login_title">Log in with your account</p>
     </div>
   </div>
+  <div class="right-column">
+      <div class="welcome-row">
+        <div class="welcome-col">
+          <h1 class="welcome-title">Welcome to</h1>
+        </div>
+        <div class="title-col">
+          <h1 class="interlab-title">Interlab</h1>
+        </div>
+      </div>
+  </div>
 </div>
-
-
-
-
-
