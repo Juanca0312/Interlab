@@ -1,55 +1,46 @@
-<div class="example-container">
-  <mat-toolbar color="primary" class="encabezado"
-               [style.marginTop.px]="mobileQuery.matches ? 0 : 5">
-    <button mat-icon-button  (click)="snav.toggle()">
-      <span class="material-icons">menu</span>
-    </button>
-    <div class="person">
-      <span class="material-icons">
-        account_circle
-      </span>
-    </div>&nbsp;
-    <div class="user">
-      <mat-label align="right">{{localStorage}}</mat-label>
-      <button class="menu" mat-button [matMenuTriggerFor]="menu">
-        <span class="material-icons">
-          keyboard_arrow_down
-        </span>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="mostrar('Edit_profile')">Editar perfil</button>
-        <button mat-menu-item (click)="logout()">Cerrar sesión</button>
-      </mat-menu>
+<div class="dashboard-container">
+  <nav class="left-nav">
+    <div class="logo-container">
+      <img class="logo" src="../../assets/InterLab.png" alt="interlab">
     </div>
-  </mat-toolbar>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboardStudent" routerLinkActive="active-link">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/findInternship" routerLinkActive="active-link">Search Internship</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/history" routerLinkActive="active-link">Internship History</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="content">
+    <header class="dashboard-header">
+      <div class="dropdown">
+        <button (click)="toggleDropdown()" class="profile-container">
+            <img class="profile-picture" src="../../assets/profile-picture.jpg" alt="profile-picture">
+            <div class="profile-text-container">
+              <p class="name">Gino Quispe</p>
+              <p class="role">Student</p>
+          </div>
+        </button>
+        <div class="options" *ngIf="showDropdown">
+          <ul>
+            <li>
+              <a routerLink="/editProfile" routerLinkActive="active-link">Edit Profile</a>
+            </li>
+            <li>
+              <a routerLink="/login" routerLinkActive="active-link">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="dashboard-content">
 
-  <mat-sidenav-container class="example-sidenav-container"
-                         [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
-                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-      <img src="./assets/InterLab.png">
-      <mat-nav-list class="lista">
-        <p><mat-list-item (click)="mostrar('Dashboard')"><mat-icon>dashboard</mat-icon>Dashboard</mat-list-item></p>
-        <p><mat-list-item (click)="mostrar('MyRequests')"><mat-icon>view_list</mat-icon>
-          My Requests
-        </mat-list-item>
-        </p>
-        <mat-list-item (click)="mostrar('FindInternship')">
-          <mat-icon>
-          search
-        </mat-icon>
-          Find Internships
-        </mat-list-item>
-
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <app-home-student *ngIf="showHome"></app-home-student>
-      <app-my-requests *ngIf="showMyRequests"></app-my-requests>
-      <app-find-internship *ngIf="showFindInternship"></app-find-internship>
-      <app-editprofilestudent *ngIf="showEditProfile"></app-editprofilestudent>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+    </section>
+  </div>
 </div>
 
 
