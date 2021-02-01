@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import { NgApexchartsModule } from "ng-apexcharts";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -80,8 +81,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatTableModule,
     MatPaginatorModule,
     MatStepperModule,
-    MatDialogModule
-
+    MatDialogModule,
+    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [Main],
