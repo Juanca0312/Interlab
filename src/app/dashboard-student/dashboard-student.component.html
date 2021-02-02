@@ -26,19 +26,31 @@
           </div>
         </button>
         <div class="options" *ngIf="showDropdown">
-          <ul>
-            <li>
-              <a routerLink="/editProfile" routerLinkActive="active-link">Edit Profile</a>
+          <ul class="options-list">
+            <li class="options-list-item">
+              <a class="options-link" routerLink="/editProfile" routerLinkActive="active-link">Edit Profile</a>
             </li>
-            <li>
-              <a routerLink="/login" routerLinkActive="active-link">Log out</a>
+            <li class="options-list-item">
+              <a class="options-link" routerLink="/login" routerLinkActive="active-link">Log out</a>
             </li>
           </ul>
         </div>
       </div>
     </header>
     <section class="dashboard-content">
-
+      <div id="chart">
+        <apx-chart
+          [series]="chartOptions.series"
+          [chart]="chartOptions.chart"
+          [xaxis]="chartOptions.xaxis"
+          [grid]="chartOptions.grid"
+          [yaxis]="chartOptions.yaxis"
+          [stroke]="chartOptions.stroke"
+          [markers]="chartOptions.markers"
+          [title]="chartOptions.title"
+          [tooltip]="chartOptions.tooltip"
+        ></apx-chart>
+      </div>
     </section>
   </div>
 </div>
