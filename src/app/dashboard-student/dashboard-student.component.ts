@@ -19,11 +19,11 @@ export type ChartOptions = {
   xaxis: ApexXAxis;
   stroke: ApexStroke;
   markers: ApexMarkers;
-  colors: string[];
   yaxis: ApexYAxis;
   grid: ApexGrid;
   title: ApexTitleSubtitle;
   tooltip: ApexTooltip,
+  colors: string[],
 };
 
 @Component({
@@ -42,12 +42,12 @@ export class DashboardStudentComponent implements OnInit {
       series: [
         {
           name: "Profile Visits",
-          data: [10, 24, 15, 35, 11, 19, 23, 28, 20]
+          data: [10, 24, 15, 35, 11, 19, 23, 28, 31, 37, 35, 30]
         }
       ],
-      colors: ["#4B7BFF"],
+      colors:['#4B7BFF'],
       chart: {
-        height: 350,
+        height: 320,
         type: "line",
         dropShadow: {
           enabled: true,
@@ -77,15 +77,20 @@ export class DashboardStudentComponent implements OnInit {
         discrete: [],
         shape: "circle",
         radius: 2,
-    },
+      },
       title: {
-        text: "Profile visits by Month",
+        text: "Profile visits in the last year",
         align: "center"
       },
       grid: {
+        show: false,
         row: {
-          colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+          colors: ["transparent", '#ffffff'], // takes an array which will be repeated on columns
           opacity: 0.5
+        },
+        column: {
+          colors: ['transparent', 'transparent'],
+          opacity: 0.2
         }
       },
       xaxis: {
@@ -98,7 +103,10 @@ export class DashboardStudentComponent implements OnInit {
           "Jun",
           "Jul",
           "Aug",
-          "Sep"
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
         ],
         title: {
           text: "Month"
@@ -106,13 +114,14 @@ export class DashboardStudentComponent implements OnInit {
       },
       yaxis: {
         title: {
-          text: "Profile Visits"
+          text: "Profile Visits",
         },
         min: 5,
         max: 40
       },
       tooltip : {
-        enabled: false,
+        enabled: true,
+        fillSeriesColor: false,
       },
     };
   }
