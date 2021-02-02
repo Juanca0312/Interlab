@@ -38,6 +38,39 @@
       </div>
     </header>
     <section class="dashboard-content">
+      <div class="contentTitleContainer">
+        <h1 class="contentTitle">My Dashboard</h1>
+      </div>
+      <div class="applicationsContainer">
+        <div class="application">
+          <div class="title-container">
+            <h1 class="application-title">Information Technology Intern, Summer 2021</h1>
+          </div>
+          <p class="application-id">Id: 650858</p>
+          <p class="application-state">In process</p>
+        </div>
+        <div class="application selected">
+          <div class="title-container">
+            <h1 class="application-title">Opportunities for Students, 2021</h1>
+          </div>
+          <p class="application-id">Id: 650858</p>
+          <p class="application-state">Selected</p>
+        </div>
+        <div class="application">
+          <div class="title-container">
+            <h1 class="application-title">Software Engineering Internship</h1>
+          </div>
+          <p class="application-id">Id: 650858</p>
+          <p class="application-state">In process</p>
+        </div>
+        <div class="application notSelected">
+          <div class="title-container">
+            <h1 class="application-title">Engineering Summer Internship, 2020</h1>
+          </div>
+          <p class="application-id">Id: 650858</p>
+          <p class="application-state">Not Selected</p>
+        </div>
+      </div>
       <div id="chart">
         <apx-chart
           [series]="chartOptions.series"
@@ -49,6 +82,7 @@
           [markers]="chartOptions.markers"
           [title]="chartOptions.title"
           [tooltip]="chartOptions.tooltip"
+          [colors]="chartOptions.colors"
         ></apx-chart>
       </div>
     </section>
