@@ -6,7 +6,7 @@
   font-weight: 300;
   font-size: 1em;
   min-width: 250px;
-  z-index: 1;
+  z-index: 10;
 }
 
 .left-nav {
@@ -16,7 +16,9 @@
 }
 
 .content {
-  width: 85%;
+  width: 85vw;
+  overflow:auto;
+  max-width: auto;
 }
 
 .logo-container {
@@ -95,11 +97,11 @@
 .dropdown {
   width: 15%;
   min-width: 180px;
-  box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
   margin: .2em 1em;
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px 20px 20px 20px;
   transition: all 0.3 ease-in-out;
 }
+
 
 .profile-container {
   display: flex;
@@ -107,16 +109,26 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  border-radius: 20px 20px 0 0;
-  box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+  border-radius: 20px 20px 20px 20px;
+  -webkit-box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.26); 
+  box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.26);
   box-sizing: border-box;
   border: 0;
   margin: 0;
+  background: #fff;
 }
 
 .profile-container:hover {
   background: rgba(216, 216, 216, 0.911);
   cursor: pointer;
+}
+
+.profile-container:focus {
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  -webkit-box-shadow: 0px -10px 9px -5px rgba(0,0,0,0.29); 
+  box-shadow: 0px -10px 9px -5px rgba(0,0,0,0.29);
+  outline: none;
 }
 
 .profile-picture {
@@ -147,10 +159,47 @@
 
 .options {
   position: absolute;
-  border-radius: 0 0 20px 20px;
-  width: 15%;
+  width: 12.75%;
   min-width: 180px;
-  box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
-  z-index:99;
-  /* background: inherit; */
+  -webkit-box-shadow: 3px 4px 9px -1px rgba(0,0,0,0.26); 
+  box-shadow: 3px 4px 9px -1px rgba(0,0,0,0.26);
+  /* margin: .2em 1em; */
+  border-radius: 0 0 20px 20px;
+  z-index: 1;
+  overflow: auto;
+}
+
+.options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options-list-item {
+  display: block;
+  box-sizing: border-box;
+  line-height: 42px;
+  height: 42px;
+}
+
+.options-list-item:hover {
+  background: rgb(238, 238, 238);
+}
+
+.options-link {
+  display: block;
+  text-decoration: none;
+  color: #282a3f;
+  padding-left: 1em;
+}
+
+.dashboard-content {
+  height: 92%;
+  display: flex;
+  align-items: center;
+}
+
+#chart {
+  width: 80%;
+  margin: 35px auto;
 }
