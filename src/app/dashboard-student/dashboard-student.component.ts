@@ -1,5 +1,6 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild, HostListener} from '@angular/core';
 import { Router } from '@angular/router';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -29,10 +30,35 @@ export type ChartOptions = {
 @Component({
   selector: 'app-dashboard-student',
   templateUrl: './dashboard-student.component.html',
-  styleUrls: ['./dashboard-student.component.css']
+  styleUrls: ['./dashboard-student.component.css'],
+  animations: [
+    trigger(
+      'inOutAnimation', 
+      [
+        transition(
+          ':enter', 
+          [
+            style({ transform:  'translateX(-100%)' , opacity: 1 }),
+            animate('.5s ease-in-out', 
+                    style({ transform:  'translateX(0)' , opacity: 1 }))
+          ]
+        ),
+        transition(
+          ':leave', 
+          [
+            style({  transform:  'translateX(0)', opacity: 1 }),
+            animate('.5s ease-in-out', 
+                    style({ transform:  'translateX(-100%)', opacity: 1 }))
+          ]
+        )
+      ]
+    )
+  ]
 })
 export class DashboardStudentComponent implements OnInit {
   showDropdown = false;
+  showNavbar = true;
+  
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
 
@@ -58,7 +84,7 @@ export class DashboardStudentComponent implements OnInit {
           opacity: 0.2
         },
         toolbar: {
-          show: true
+          show: false
         }
       },
       stroke: {
@@ -130,5 +156,8 @@ export class DashboardStudentComponent implements OnInit {
 
   toggleDropdown(){
     this.showDropdown = !this.showDropdown;
+  }
+  toggleNavbar() {
+    this.showNavbar = !this.showNavbar;
   }
 }
