@@ -5,7 +5,7 @@
   height: 100%;
   font-weight: 300;
   font-size: 1em;
-  min-width: 250px;
+  min-width: 350px;
   z-index: -1;
 }
 
@@ -13,10 +13,12 @@
   width: 15%;
   min-width: 195px;
   border-right: 1px solid #3333337c;
+  z-index: 999;
+  background: #fff;
 }
 
 .content {
-  width: 85vw;
+  width: 100%;
   overflow:auto;
   max-width: auto;
 }
@@ -39,7 +41,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
 .nav-item {
@@ -89,17 +91,38 @@
 
 .dashboard-header {
   height: 8%;
-  /* border-bottom: 1px solid #3333337c; */
+  padding: .5rem 0;
+  transition: all .5s ease-in-out;
   display: flex;
-  justify-content: flex-end;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #fff;
+}
+
+.toggleNav {
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+}
+
+.menuIcon {
+  margin: 1rem;
+  cursor: pointer;
+  transition: all .15s ease-in-out;
+}
+
+.menuIcon:hover {
+  transform: scale(1.2);
 }
 
 .dropdown {
+  display: inline-block;
   width: 15%;
   min-width: 180px;
   margin: .2em 1em;
   border-radius: 20px 20px 20px 20px;
-  transition: all 0.3 ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 
@@ -158,12 +181,12 @@
 }
 
 .options {
-  width: 12.75%;
   min-width: 180px;
   -webkit-box-shadow: 3px 4px 9px -1px rgba(0,0,0,0.26); 
   box-shadow: 3px 4px 9px -1px rgba(0,0,0,0.26);
-  background: none;
+  background: #fff;
   border-radius: 20px;
+  margin: 0;
 }
 
 .options-list {
@@ -202,15 +225,17 @@
 }
 
 .dashboard-content {
-  height: 92%;
+  height: 88%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #chart {
-  width: 80%;
-  margin: 35px auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 2rem;
 }
 
 h1 {
@@ -238,14 +263,20 @@ h1 {
   justify-content: space-around;
 }
 
+.applicationRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
 .application {
   cursor: pointer;
   display: flex;
   border-radius: 10px;
   flex-direction: column;
-  margin: 1em;
+  margin: 1rem;
   padding: 1em;
-  width: 17%;
+  width: 50%;
   background: rgb(245, 245, 245);
   height: auto;
   transition: all .2s ease-in-out;
@@ -255,16 +286,10 @@ h1 {
   transform: scale(1.1);
 }
 
-.selected {
-  background: #7599ff;
-}
-
-.notSelected {
-  background: #ff7575;
-}
-
 .title-container {
-  height: 50%;
+  height: 4em;
+  line-height: 4em;
+  overflow: hidden;
 }
 
 .application-title {
@@ -281,4 +306,62 @@ h1 {
 .application-state {
   font-size: .8rem;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 950px) {
+  .left-nav {
+    width: 30%;
+    height: 100%;
+    min-width: 170px;
+    border-right: 1px solid #3333337c;
+    transition: all .2s ease-in-out;
+    z-index: 999;
+    background: #fff;
+    position: absolute;
+  }
+  
+.nav-list {
+  padding-left: 0;
+}
+  .dashboard-header {
+    /* margin-left: 30%;
+    margin-left: 195px; */
+    margin-left: max(30%, 170px); 
+  }
+  .dashboard-header-no-margin {
+    margin-left: 0px;
+  }
+  .applicationsContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .applicationRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .application {
+    cursor: pointer;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+    width: 60%;
+    background: rgb(245, 245, 245);
+    transition: all .2s ease-in-out;
+  }
+}
+
+/* Keep at last so they can override default color */
+.selected {
+  background: #7599ff;
+}
+
+.notSelected {
+  background: #ff7575;
 }
